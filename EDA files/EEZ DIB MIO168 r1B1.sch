@@ -11636,6 +11636,8 @@ This work is licensed under the &lt;i&gt;&lt;a href=https://www.tapr.org/OHL&gt;
 <wire x1="-2.2352" y1="4.9022" x2="-2.2352" y2="-4.9022" width="0.1524" layer="51"/>
 <wire x1="0.3048" y1="4.9022" x2="-0.3048" y2="4.9022" width="0.1524" layer="51" curve="-180"/>
 <wire x1="0.3048" y1="5.0292" x2="-0.3048" y2="5.0292" width="0.1524" layer="21" curve="-180"/>
+<text x="-3.175" y="5.3975" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="0" y="0" size="1.27" layer="27" ratio="10" align="center">&gt;VALUE</text>
 </package>
 </packages>
 <symbols>
