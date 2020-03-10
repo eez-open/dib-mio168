@@ -1,4 +1,4 @@
-The EEZ DIB MIO168 module features multiple digital and analog I/O.
+The [EEZ DIB](https://github.com/eez-open/modular-psu) MIO168 module features multiple digital and analog I/O.
 
 ### Feature list
 
@@ -15,7 +15,7 @@ The EEZ DIB MIO168 module features multiple digital and analog I/O.
 * Optional SWD for debugging
 * Optional Micro SD card
 * I2C EEPROM for storing board specific parameters
-* Dimensions: 146 x 95 mm, 2-layer PCB
+* Dimensions: 146 x 95 mm, 4-layer PCB
 
 ### PCB r1B1 prototype
 
