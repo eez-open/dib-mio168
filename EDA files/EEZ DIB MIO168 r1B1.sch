@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.025" unitdist="inch" unit="inch" style="lines" multiple="4" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -2922,6 +2922,74 @@ Panasonic TS-HA series,  ECOS1VA103CA (10.000uF/35V)&lt;br&gt;Farnell: &lt;b&gt;
 <smd name="S2" x="14.3" y="1.6" dx="1.45" dy="3" layer="1" rot="R180"/>
 <wire x1="13.93" y1="9.99" x2="13.93" y2="3.34" width="0.127" layer="21"/>
 </package>
+<package name="JP3-CUT">
+<text x="-2.032" y="1.016" size="0.8128" layer="25" ratio="10">&gt;NAME</text>
+<smd name="COM" x="0" y="0" dx="1.27" dy="1.524" layer="1" stop="no" thermals="no" cream="no"/>
+<polygon width="0.0254" layer="29">
+<vertex x="-0.1905" y="0.889"/>
+<vertex x="-1.016" y="0.889" curve="90"/>
+<vertex x="-1.905" y="0" curve="90"/>
+<vertex x="-1.016" y="-0.889"/>
+<vertex x="-0.1905" y="-0.889"/>
+</polygon>
+<polygon width="0.0254" layer="1">
+<vertex x="-1.016" y="0.762"/>
+<vertex x="-1.016" y="0.254"/>
+<vertex x="-0.508" y="0.254"/>
+<vertex x="-0.508" y="-0.254"/>
+<vertex x="-1.016" y="-0.254"/>
+<vertex x="-1.016" y="-0.762" curve="-90"/>
+<vertex x="-1.778" y="0" curve="-90"/>
+</polygon>
+<polygon width="0.0254" layer="29">
+<vertex x="0.1905" y="-0.889"/>
+<vertex x="1.016" y="-0.889" curve="90"/>
+<vertex x="1.905" y="0" curve="90"/>
+<vertex x="1.016" y="0.889"/>
+<vertex x="0.1905" y="0.889"/>
+</polygon>
+<polygon width="0.0254" layer="1">
+<vertex x="1.016" y="-0.762"/>
+<vertex x="1.016" y="0.762" curve="-90"/>
+<vertex x="1.778" y="0" curve="-90"/>
+</polygon>
+<smd name="NC" x="-1.4605" y="0" dx="0.508" dy="0.254" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="NO" x="1.4605" y="0" dx="0.508" dy="0.254" layer="1" stop="no" thermals="no" cream="no"/>
+</package>
+<package name="JP3-CUT2">
+<text x="-2.032" y="1.016" size="0.8128" layer="25" ratio="10">&gt;NAME</text>
+<smd name="COM" x="0" y="0" dx="1.27" dy="1.524" layer="1" rot="R180" stop="no" thermals="no" cream="no"/>
+<polygon width="0.0254" layer="29">
+<vertex x="0.1905" y="-0.889"/>
+<vertex x="1.016" y="-0.889" curve="90"/>
+<vertex x="1.905" y="0" curve="90"/>
+<vertex x="1.016" y="0.889"/>
+<vertex x="0.1905" y="0.889"/>
+</polygon>
+<polygon width="0.0254" layer="1">
+<vertex x="1.016" y="-0.762"/>
+<vertex x="1.016" y="-0.254"/>
+<vertex x="0.508" y="-0.254"/>
+<vertex x="0.508" y="0.254"/>
+<vertex x="1.016" y="0.254"/>
+<vertex x="1.016" y="0.762" curve="-90"/>
+<vertex x="1.778" y="0" curve="-90"/>
+</polygon>
+<polygon width="0.0254" layer="29">
+<vertex x="-0.1905" y="0.889"/>
+<vertex x="-1.016" y="0.889" curve="90"/>
+<vertex x="-1.905" y="0" curve="90"/>
+<vertex x="-1.016" y="-0.889"/>
+<vertex x="-0.1905" y="-0.889"/>
+</polygon>
+<polygon width="0.0254" layer="1">
+<vertex x="-1.016" y="0.762"/>
+<vertex x="-1.016" y="-0.762" curve="-90"/>
+<vertex x="-1.778" y="0" curve="-90"/>
+</polygon>
+<smd name="NC" x="1.4605" y="0" dx="0.508" dy="0.254" layer="1" rot="R180" stop="no" thermals="no" cream="no"/>
+<smd name="NO" x="-1.4605" y="0" dx="0.508" dy="0.254" layer="1" rot="R180" stop="no" thermals="no" cream="no"/>
+</package>
 </packages>
 <symbols>
 <symbol name="L_POINT_V">
@@ -3622,6 +3690,21 @@ Panasonic TS-HA series,  ECOS1VA103CA (10.000uF/35V)&lt;br&gt;Farnell: &lt;b&gt;
 <vertex x="3.302" y="-0.254"/>
 </polygon>
 <wire x1="2.54" y1="-1.905" x2="3.81" y2="-1.905" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="JP3-CUT">
+<wire x1="0" y1="2.54" x2="0" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="-0.254" y1="1.524" x2="0.254" y2="1.524" width="0.508" layer="94" curve="-180" cap="flat"/>
+<wire x1="0.254" y1="1.016" x2="0" y2="0.762" width="0.508" layer="94" curve="-90" cap="flat"/>
+<text x="-3.81" y="3.175" size="1.778" layer="95">&gt;NAME</text>
+<pin name="COM" x="2.54" y="0" visible="off" length="short" direction="pas" rot="R180"/>
+<pin name="NO" x="0" y="2.54" visible="off" length="point" direction="pas" rot="R180"/>
+<pin name="NC" x="0" y="-2.54" visible="off" length="point" direction="pas" rot="R180"/>
+<wire x1="0" y1="0.762" x2="-0.254" y2="1.016" width="0.508" layer="94" curve="-90" cap="flat"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-1.778" width="0.1524" layer="94"/>
+<wire x1="0.254" y1="-1.524" x2="0" y2="-1.778" width="0.508" layer="94" curve="-90" cap="flat"/>
+<wire x1="0" y1="-1.778" x2="-0.254" y2="-1.524" width="0.508" layer="94" curve="-90" cap="flat"/>
+<wire x1="-0.254" y1="-1.016" x2="0.254" y2="-1.016" width="0.508" layer="94" curve="-180" cap="flat"/>
+<wire x1="0" y1="-1.778" x2="0" y2="0.762" width="0.1524" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -4827,6 +4910,33 @@ Farnell: &lt;b&gt;2423288&lt;/b&gt;</description>
 <connect gate="A" pin="D" pad="3"/>
 <connect gate="A" pin="G" pad="1"/>
 <connect gate="A" pin="S" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="JP3-CUT" prefix="JP">
+<gates>
+<gate name="G$1" symbol="JP3-CUT" x="-2.54" y="0"/>
+</gates>
+<devices>
+<device name="" package="JP3-CUT">
+<connects>
+<connect gate="G$1" pin="COM" pad="COM"/>
+<connect gate="G$1" pin="NC" pad="NC"/>
+<connect gate="G$1" pin="NO" pad="NO"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="-ROTATED" package="JP3-CUT2">
+<connects>
+<connect gate="G$1" pin="COM" pad="COM"/>
+<connect gate="G$1" pin="NC" pad="NC"/>
+<connect gate="G$1" pin="NO" pad="NO"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -12706,11 +12816,12 @@ Source: Samtec SSW.pdf</description>
 <part name="U$6" library="EEZ_DIB" deviceset="-12V_ISO" device=""/>
 <part name="U$7" library="EEZ_DIB" deviceset="+12V_ISO" device=""/>
 <part name="D2" library="diode" deviceset="BAT54S" device="" value="BAT54SFILM"/>
-<part name="JP3" library="EEZ_Lib1" deviceset="JP2-CUT" device="-0805"/>
 <part name="JP4" library="EEZ_Lib1" deviceset="JP2-CUT" device="-0805"/>
+<part name="JP5" library="EEZ_Lib1" deviceset="JP2-CUT" device="-0805"/>
 <part name="U$25" library="EEZ_DIB" deviceset="+15V_ISO" device=""/>
 <part name="U$29" library="EEZ_DIB" deviceset="-15V_ISO" device=""/>
 <part name="U$31" library="EEZ_DIB" deviceset="+5V_ISO" device=""/>
+<part name="JP3" library="EEZ_Lib1" deviceset="JP3-CUT" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -16990,6 +17101,9 @@ Isolated power supply, LDOs</text>
 <wire x1="111.76" y1="162.56" x2="127" y2="162.56" width="0.1524" layer="91"/>
 <junction x="111.76" y="162.56"/>
 <junction x="127" y="162.56"/>
+<wire x1="111.76" y1="170.18" x2="121.92" y2="170.18" width="0.1524" layer="91"/>
+<junction x="111.76" y="170.18"/>
+<label x="121.92" y="170.815" size="1.27" layer="102" rot="MR0"/>
 </segment>
 </net>
 <net name="N$60" class="0">
@@ -18397,9 +18511,9 @@ Cold junction compensation</text>
 <instance part="SUPPLY76" gate="GND" x="22.86" y="93.98" smashed="yes">
 <attribute name="VALUE" x="20.955" y="94.615" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="IC35" gate="A" x="71.12" y="134.62" smashed="yes" rot="R180">
-<attribute name="NAME" x="72.39" y="140.335" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="63.5" y="128.27" size="1.778" layer="96" rot="MR180"/>
+<instance part="IC35" gate="A" x="73.66" y="132.08" smashed="yes" rot="R180">
+<attribute name="NAME" x="74.93" y="137.795" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="66.04" y="125.73" size="1.778" layer="96" rot="MR180"/>
 </instance>
 <instance part="Q7" gate="A" x="66.04" y="114.3" smashed="yes" rot="MR90">
 <attribute name="NAME" x="67.945" y="119.38" size="1.778" layer="95" rot="MR0"/>
@@ -18654,8 +18768,15 @@ Cold junction compensation</text>
 <instance part="X4" gate="-6" x="17.78" y="40.64"/>
 <instance part="X4" gate="-7" x="17.78" y="33.02"/>
 <instance part="X4" gate="-8" x="17.78" y="10.16"/>
-<instance part="JP3" gate="G$1" x="73.66" y="66.04"/>
-<instance part="JP4" gate="G$1" x="73.66" y="38.1"/>
+<instance part="JP4" gate="G$1" x="73.66" y="66.04" smashed="yes">
+<attribute name="NAME" x="72.39" y="62.865" size="1.778" layer="95"/>
+</instance>
+<instance part="JP5" gate="G$1" x="73.66" y="38.1" smashed="yes">
+<attribute name="NAME" x="72.39" y="34.925" size="1.778" layer="95"/>
+</instance>
+<instance part="JP3" gate="G$1" x="83.82" y="144.78" smashed="yes" rot="MR0">
+<attribute name="NAME" x="84.455" y="144.145" size="1.778" layer="95"/>
+</instance>
 </instances>
 <busses>
 <bus name="CURR_SW[0..3]">
@@ -18969,8 +19090,8 @@ Cold junction compensation</text>
 </segment>
 <segment>
 <pinref part="IC35" gate="A" pin="+IN"/>
-<wire x1="78.74" y1="132.08" x2="88.9" y2="132.08" width="0.1524" layer="91"/>
-<label x="88.9" y="132.715" size="1.27" layer="102" rot="MR0"/>
+<wire x1="81.28" y1="129.54" x2="91.44" y2="129.54" width="0.1524" layer="91"/>
+<label x="91.44" y="130.175" size="1.27" layer="102" rot="MR0"/>
 </segment>
 </net>
 <net name="ADC_IRQ" class="0">
@@ -19127,19 +19248,15 @@ Cold junction compensation</text>
 <net name="N$31" class="0">
 <segment>
 <pinref part="IC35" gate="A" pin="-IN"/>
-<wire x1="78.74" y1="137.16" x2="81.28" y2="137.16" width="0.1524" layer="91"/>
-<wire x1="81.28" y1="137.16" x2="81.28" y2="142.24" width="0.1524" layer="91"/>
-<wire x1="81.28" y1="142.24" x2="60.96" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="134.62" x2="83.82" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="134.62" x2="83.82" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="139.7" x2="63.5" y2="139.7" width="0.1524" layer="91"/>
 <pinref part="IC35" gate="A" pin="OUT"/>
-<wire x1="58.42" y1="142.24" x2="60.96" y2="142.24" width="0.1524" layer="91"/>
-<pinref part="IC21" gate="B" pin="COM"/>
-<pinref part="IC26" gate="B" pin="COM"/>
-<wire x1="58.42" y1="132.08" x2="60.96" y2="132.08" width="0.1524" layer="91"/>
-<wire x1="60.96" y1="132.08" x2="60.96" y2="134.62" width="0.1524" layer="91"/>
-<wire x1="60.96" y1="134.62" x2="60.96" y2="142.24" width="0.1524" layer="91"/>
-<junction x="60.96" y="142.24"/>
-<wire x1="63.5" y1="134.62" x2="60.96" y2="134.62" width="0.1524" layer="91"/>
-<junction x="60.96" y="134.62"/>
+<wire x1="66.04" y1="132.08" x2="63.5" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="132.08" x2="63.5" y2="139.7" width="0.1524" layer="91"/>
+<pinref part="JP3" gate="G$1" pin="NC"/>
+<wire x1="83.82" y1="142.24" x2="83.82" y2="139.7" width="0.1524" layer="91"/>
+<junction x="83.82" y="139.7"/>
 </segment>
 </net>
 <net name="AIN_0P" class="0">
@@ -19443,7 +19560,7 @@ Cold junction compensation</text>
 <wire x1="38.1" y1="60.96" x2="33.02" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="38.1" y1="60.96" x2="38.1" y2="66.04" width="0.1524" layer="91"/>
 <junction x="38.1" y="60.96"/>
-<pinref part="JP3" gate="G$1" pin="1"/>
+<pinref part="JP4" gate="G$1" pin="1"/>
 <wire x1="38.1" y1="66.04" x2="73.66" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -19456,7 +19573,7 @@ Cold junction compensation</text>
 <wire x1="40.64" y1="33.02" x2="38.1" y2="33.02" width="0.1524" layer="91"/>
 <junction x="33.02" y="33.02"/>
 <pinref part="FB9" gate="G$1" pin="2"/>
-<pinref part="JP4" gate="G$1" pin="1"/>
+<pinref part="JP5" gate="G$1" pin="1"/>
 <wire x1="38.1" y1="33.02" x2="33.02" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="73.66" y1="38.1" x2="38.1" y2="38.1" width="0.1524" layer="91"/>
 <wire x1="38.1" y1="38.1" x2="38.1" y2="33.02" width="0.1524" layer="91"/>
@@ -19505,7 +19622,7 @@ Cold junction compensation</text>
 <wire x1="121.92" y1="22.86" x2="121.92" y2="33.02" width="0.1524" layer="91"/>
 <junction x="121.92" y="33.02"/>
 <pinref part="R77" gate="G$1" pin="1"/>
-<pinref part="JP4" gate="G$1" pin="2"/>
+<pinref part="JP5" gate="G$1" pin="2"/>
 <wire x1="76.2" y1="38.1" x2="121.92" y2="38.1" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="38.1" x2="121.92" y2="33.02" width="0.1524" layer="91"/>
 </segment>
@@ -19620,7 +19737,7 @@ Cold junction compensation</text>
 <wire x1="121.92" y1="50.8" x2="121.92" y2="60.96" width="0.1524" layer="91"/>
 <junction x="121.92" y="60.96"/>
 <pinref part="R73" gate="G$1" pin="1"/>
-<pinref part="JP3" gate="G$1" pin="2"/>
+<pinref part="JP4" gate="G$1" pin="2"/>
 <wire x1="76.2" y1="66.04" x2="121.92" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="66.04" x2="121.92" y2="60.96" width="0.1524" layer="91"/>
 </segment>
@@ -19746,6 +19863,27 @@ Cold junction compensation</text>
 <wire x1="218.44" y1="137.16" x2="208.28" y2="137.16" width="0.1524" layer="91"/>
 <label x="208.915" y="137.795" size="1.27" layer="102"/>
 <wire x1="208.28" y1="129.54" x2="208.28" y2="137.16" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="1V25_REF" class="0">
+<segment>
+<pinref part="JP3" gate="G$1" pin="NO"/>
+<wire x1="83.82" y1="147.32" x2="83.82" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="149.86" x2="93.98" y2="149.86" width="0.1524" layer="91"/>
+<label x="93.98" y="150.495" size="1.27" layer="102" rot="MR0"/>
+</segment>
+</net>
+<net name="N$20" class="0">
+<segment>
+<pinref part="IC21" gate="B" pin="COM"/>
+<wire x1="58.42" y1="142.24" x2="60.96" y2="142.24" width="0.1524" layer="91"/>
+<pinref part="JP3" gate="G$1" pin="COM"/>
+<wire x1="81.28" y1="144.78" x2="60.96" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="144.78" x2="60.96" y2="142.24" width="0.1524" layer="91"/>
+<junction x="60.96" y="142.24"/>
+<wire x1="60.96" y1="132.08" x2="60.96" y2="142.24" width="0.1524" layer="91"/>
+<pinref part="IC26" gate="B" pin="COM"/>
+<wire x1="58.42" y1="132.08" x2="60.96" y2="132.08" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
