@@ -5222,13 +5222,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <text x="-2.54" y="3.175" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="+12V" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
 </symbol>
-<symbol name="+05V">
-<wire x1="-0.635" y1="1.27" x2="0.635" y2="1.27" width="0.1524" layer="94"/>
-<wire x1="0" y1="0.635" x2="0" y2="1.905" width="0.1524" layer="94"/>
-<circle x="0" y="1.27" radius="1.27" width="0.254" layer="94"/>
-<text x="-1.905" y="3.175" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="+5V" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
-</symbol>
 </symbols>
 <devicesets>
 <deviceset name="GND" prefix="SUPPLY">
@@ -5248,19 +5241,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
 <gate name="+12V" symbol="+12V" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="+5V" prefix="SUPPLY">
-<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
-<gates>
-<gate name="+5V" symbol="+05V" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -11638,6 +11618,11 @@ This work is licensed under the &lt;i&gt;&lt;a href=https://www.tapr.org/OHL&gt;
 <wire x1="0.3048" y1="5.0292" x2="-0.3048" y2="5.0292" width="0.1524" layer="21" curve="-180"/>
 <text x="-3.175" y="5.3975" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="0" y="0" size="1.27" layer="27" ratio="10" align="center">&gt;VALUE</text>
+<polygon width="0.1524" layer="21">
+<vertex x="-1.7272" y="4.4958"/>
+<vertex x="-0.8382" y="4.4958"/>
+<vertex x="-0.8382" y="3.8608"/>
+</polygon>
 </package>
 </packages>
 <symbols>
@@ -12323,7 +12308,7 @@ Source: Samtec SSW.pdf</description>
 <part name="+3V9" library="supply1" deviceset="+3V3" device=""/>
 <part name="FRAME4" library="frames" deviceset="DINA4_L" device=""/>
 <part name="FRAME5" library="frames" deviceset="DINA4_L" device=""/>
-<part name="IC2" library="EEZ_Lib1" deviceset="SI8641" device="NSOIC-16" value="Si8641AB-B-IS1"/>
+<part name="IC2" library="EEZ_Lib1" deviceset="SI8641" device="NSOIC-16" value="Si8641BB-B-IS1"/>
 <part name="R21" library="rcl" deviceset="R-EU_" device="R0805" value="9K09 0.1%"/>
 <part name="R23" library="rcl" deviceset="R-EU_" device="R0805" value="75K 0.1%"/>
 <part name="R17" library="rcl" deviceset="R-EU_" device="R0805" value="75K 0.1%"/>
@@ -12339,11 +12324,11 @@ Source: Samtec SSW.pdf</description>
 <part name="C66" library="rcl" deviceset="C-EU" device="C0805" value="4u7"/>
 <part name="C65" library="rcl" deviceset="C-EU" device="C0603" value="100n"/>
 <part name="R26" library="rcl" deviceset="R-EU_" device="R0805" value="180R"/>
-<part name="TVS4" library="EEZ_Lib1" deviceset="PESDXL1BA" device="" value="PESD12VL1BA.115"/>
+<part name="TVS4" library="EEZ_Lib1" deviceset="PESDXL1BA" device="" value="PESD12VL1BA,115"/>
 <part name="SUPPLY40" library="supply2" deviceset="GND" device=""/>
 <part name="R27" library="rcl" deviceset="R-EU_" device="R0805" value="47R"/>
 <part name="R19" library="rcl" deviceset="R-EU_" device="R0805" value="180R"/>
-<part name="TVS3" library="EEZ_Lib1" deviceset="PESDXL1BA" device="" value="PESD12VL1BA.115"/>
+<part name="TVS3" library="EEZ_Lib1" deviceset="PESDXL1BA" device="" value="PESD12VL1BA,115"/>
 <part name="SUPPLY11" library="supply2" deviceset="GND" device=""/>
 <part name="R20" library="rcl" deviceset="R-EU_" device="R0805" value="47R"/>
 <part name="C62" library="rcl" deviceset="C-EU" device="C0603" value="100n"/>
@@ -12365,7 +12350,7 @@ Source: Samtec SSW.pdf</description>
 <part name="IC11" library="EEZ_TI" deviceset="DAC7760" device="IPWPR"/>
 <part name="C50" library="rcl" deviceset="C-EU" device="C0805" value="2n2"/>
 <part name="FB3" library="EEZ_Lib1" deviceset="FERRITE_BEAD" device="0603" value="BLM18AG102SH1D"/>
-<part name="TVS2" library="EEZ_Lib1" deviceset="PESDXL1BA" device="" value="PESD12VL1BA.115"/>
+<part name="TVS2" library="EEZ_Lib1" deviceset="PESDXL1BA" device="" value="PESD12VL1BA,115"/>
 <part name="C51" library="rcl" deviceset="C-EU" device="C0603" value="100n"/>
 <part name="C54" library="rcl" deviceset="C-EU" device="C0603" value="100n"/>
 <part name="C57" library="rcl" deviceset="C-EU" device="C0603" value="100n"/>
@@ -12387,7 +12372,7 @@ Source: Samtec SSW.pdf</description>
 <part name="IC10" library="EEZ_TI" deviceset="DAC7760" device="IPWPR"/>
 <part name="C41" library="rcl" deviceset="C-EU" device="C0805" value="2n2"/>
 <part name="FB2" library="EEZ_Lib1" deviceset="FERRITE_BEAD" device="0603" value="BLM18AG102SH1D"/>
-<part name="TVS1" library="EEZ_Lib1" deviceset="PESDXL1BA" device="" value="PESD12VL1BA.115"/>
+<part name="TVS1" library="EEZ_Lib1" deviceset="PESDXL1BA" device="" value="PESD12VL1BA,115"/>
 <part name="C42" library="rcl" deviceset="C-EU" device="C0603" value="100n"/>
 <part name="C45" library="rcl" deviceset="C-EU" device="C0603" value="100n"/>
 <part name="C47" library="rcl" deviceset="C-EU" device="C0603" value="100n"/>
@@ -12420,16 +12405,16 @@ Source: Samtec SSW.pdf</description>
 <part name="SUPPLY26" library="supply2" deviceset="GND" device=""/>
 <part name="C1" library="rcl" deviceset="C-EU" device="C0603" value="100n"/>
 <part name="IC1" library="EEZ_Lib1" deviceset="AT24CXX" device="SOIC8" value="M24C32-WMN6P"/>
-<part name="IC5" library="EEZ_DIB" deviceset="LP2985" device="" value="LP2985-5DBVR"/>
+<part name="IC5" library="EEZ_DIB" deviceset="LP2985" device="" value="LP2985-50DBVR"/>
 <part name="SUPPLY64" library="supply2" deviceset="GND" device=""/>
 <part name="C17" library="rcl" deviceset="C-EU" device="C0805" value="10n"/>
 <part name="SUPPLY66" library="supply2" deviceset="GND" device=""/>
 <part name="+3V1" library="supply1" deviceset="+3V3" device=""/>
-<part name="C16" library="rcl" deviceset="C-EU" device="C1206" value="4u7"/>
+<part name="C16" library="rcl" deviceset="C-EU" device="C0805" value="4u7"/>
 <part name="RN3" library="EEZ_Lib1" deviceset="R_ARRAY4" device="" value="DR1206-10K-4/8"/>
 <part name="+3V6" library="supply1" deviceset="+3V3" device=""/>
-<part name="IC7" library="EEZ_Lib1" deviceset="MC79LXX" device="SOIC" value="MC79L12"/>
-<part name="IC4" library="EEZ_Lib1" deviceset="MC78LXX" device="SOIC8" value="MC78L12"/>
+<part name="IC7" library="EEZ_Lib1" deviceset="MC79LXX" device="SOIC" value="L79L12"/>
+<part name="IC4" library="EEZ_Lib1" deviceset="MC78LXX" device="SOIC8" value="L78L12"/>
 <part name="C10" library="rcl" deviceset="C-EU" device="C0603" value="100n"/>
 <part name="C13" library="rcl" deviceset="C-EU" device="C0603" value="100n"/>
 <part name="L1" library="EEZ_inductors_and_transformers" deviceset="DLW21S" device="" value="DLW21SN371SQ2L"/>
@@ -12454,7 +12439,7 @@ Source: Samtec SSW.pdf</description>
 <part name="SUPPLY38" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY39" library="supply2" deviceset="GND" device=""/>
 <part name="C14" library="rcl" deviceset="C-EU" device="C0805" value="2u2"/>
-<part name="C18" library="rcl" deviceset="C-EU" device="C1206" value="4u7"/>
+<part name="C18" library="rcl" deviceset="C-EU" device="C0805" value="4u7"/>
 <part name="U$21" library="EEZ_DIB" deviceset="+5V_ISO" device=""/>
 <part name="U$22" library="EEZ_DIB" deviceset="+3V3_ISO" device=""/>
 <part name="U$23" library="EEZ_DIB" deviceset="+12V_ISO" device=""/>
@@ -12473,15 +12458,15 @@ Source: Samtec SSW.pdf</description>
 <part name="U$5" library="EEZ_DIB" deviceset="+3V3_ISO" device=""/>
 <part name="TR1" library="EEZ_inductors_and_transformers" deviceset="TBA-DUAL" device="-2W" value="TBA2-1223"/>
 <part name="TR2" library="EEZ_inductors_and_transformers" deviceset="MDD02" device="" value="MDD02M-15"/>
-<part name="IC3" library="EEZ_Lib1" deviceset="SI8641" device="NSOIC-16" value="Si8641AB-B-IS1"/>
+<part name="IC3" library="EEZ_Lib1" deviceset="SI8641" device="NSOIC-16" value="Si8641BB-B-IS1"/>
 <part name="C4" library="rcl" deviceset="C-EU" device="C0603" value="100n"/>
 <part name="GND9" library="supply1" deviceset="GNDIO" device=""/>
 <part name="C5" library="rcl" deviceset="C-EU" device="C0603" value="100n"/>
 <part name="SUPPLY56" library="supply2" deviceset="GND" device=""/>
 <part name="GND10" library="supply1" deviceset="GNDIO" device=""/>
 <part name="SUPPLY58" library="supply2" deviceset="GND" device=""/>
-<part name="IC9" library="EEZ_Lib1" deviceset="TL072" device="SOIC8" value="OPA2196D"/>
-<part name="IC14" library="EEZ_Lib1" deviceset="TL072" device="SOIC8" value="OPA2196D"/>
+<part name="IC9" library="EEZ_Lib1" deviceset="TL072" device="SOIC8" value="OPA2196IDR"/>
+<part name="IC14" library="EEZ_Lib1" deviceset="TL072" device="SOIC8" value="OPA2196IDR"/>
 <part name="C61" library="rcl" deviceset="C-EU" device="C0603" value="100n"/>
 <part name="C64" library="rcl" deviceset="C-EU" device="C0603" value="100n"/>
 <part name="SUPPLY59" library="supply2" deviceset="GND" device=""/>
@@ -12504,8 +12489,6 @@ Source: Samtec SSW.pdf</description>
 <part name="SUPPLY65" library="supply2" deviceset="GND" device=""/>
 <part name="R30" library="rcl" deviceset="R-EU_" device="R0805" value="10K"/>
 <part name="U$34" library="EEZ_DIB" deviceset="+3V3_ISO" device=""/>
-<part name="SUPPLY43" library="supply2" deviceset="+5V" device=""/>
-<part name="SUPPLY44" library="supply2" deviceset="+5V" device=""/>
 <part name="IC19" library="EEZ_DIB" deviceset="74HC126" device="PW,118"/>
 <part name="D5" library="diode" deviceset="BAT54S" device="" value="BAT54SFILM"/>
 <part name="SUPPLY72" library="supply2" deviceset="GND" device=""/>
@@ -12551,7 +12534,7 @@ Source: Samtec SSW.pdf</description>
 <part name="SUPPLY116" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY92" library="supply2" deviceset="GND" device=""/>
 <part name="J2" library="EEZ_Lib1" deviceset="5033981892" device="" value="503398-1892"/>
-<part name="C21" library="rcl" deviceset="C-EU" device="C1206" value="4u7"/>
+<part name="C21" library="rcl" deviceset="C-EU" device="C0805" value="4u7"/>
 <part name="SUPPLY70" library="supply2" deviceset="GND" device=""/>
 <part name="R4" library="rcl" deviceset="R-EU_" device="R0805" value="47K"/>
 <part name="R2" library="rcl" deviceset="R-EU_" device="R0805" value="47K"/>
@@ -12616,20 +12599,20 @@ Source: Samtec SSW.pdf</description>
 <part name="C80" library="rcl" deviceset="C-EU" device="C0603" value="100n"/>
 <part name="C85" library="rcl" deviceset="C-EU" device="C0603" value="100n"/>
 <part name="C74" library="rcl" deviceset="C-EU" device="C0603" value="100n"/>
-<part name="C75" library="rcl" deviceset="C-EU" device="C1210" value="10u"/>
+<part name="C75" library="rcl" deviceset="C-EU" device="C1206" value="10u"/>
 <part name="C76" library="rcl" deviceset="C-EU" device="C0805" value="330p"/>
 <part name="C77" library="rcl" deviceset="C-EU" device="C0805" value="330p"/>
 <part name="IC36" library="EEZ_TI" deviceset="ADS8674" device="IDBT"/>
-<part name="TVS5" library="EEZ_Lib1" deviceset="PESDXL1BA" device="" value="PESD12VL1BA.115"/>
+<part name="TVS5" library="EEZ_Lib1" deviceset="PESDXL1BA" device="" value="PESD12VL1BA,115"/>
 <part name="C89" library="rcl" deviceset="C-EU" device="C0805" value="2n2"/>
 <part name="R61" library="rcl" deviceset="R-EU_" device="R0805" value="1K"/>
-<part name="TVS6" library="EEZ_Lib1" deviceset="PESDXL1BA" device="" value="PESD12VL1BA.115"/>
+<part name="TVS6" library="EEZ_Lib1" deviceset="PESDXL1BA" device="" value="PESD12VL1BA,115"/>
 <part name="C90" library="rcl" deviceset="C-EU" device="C0805" value="2n2"/>
 <part name="R69" library="rcl" deviceset="R-EU_" device="R0805" value="1K"/>
-<part name="TVS7" library="EEZ_Lib1" deviceset="PESDXL1BA" device="" value="PESD12VL1BA.115"/>
+<part name="TVS7" library="EEZ_Lib1" deviceset="PESDXL1BA" device="" value="PESD12VL1BA,115"/>
 <part name="C96" library="rcl" deviceset="C-EU" device="C0805" value="2n2"/>
 <part name="R73" library="rcl" deviceset="R-EU_" device="R0805" value="1K"/>
-<part name="TVS8" library="EEZ_Lib1" deviceset="PESDXL1BA" device="" value="PESD12VL1BA.115"/>
+<part name="TVS8" library="EEZ_Lib1" deviceset="PESDXL1BA" device="" value="PESD12VL1BA,115"/>
 <part name="C98" library="rcl" deviceset="C-EU" device="C0805" value="2n2"/>
 <part name="R77" library="rcl" deviceset="R-EU_" device="R0805" value="1K"/>
 <part name="SUPPLY36" library="supply2" deviceset="GND" device=""/>
@@ -12889,12 +12872,6 @@ Isolated power supply, LDOs</text>
 </instance>
 <instance part="X1" gate="-22" x="66.04" y="132.08" smashed="yes">
 <attribute name="NAME" x="59.69" y="132.969" size="1.778" layer="95" rot="R180"/>
-</instance>
-<instance part="X1" gate="-23" x="33.02" y="129.54" smashed="yes" rot="MR0">
-<attribute name="NAME" x="39.37" y="130.429" size="1.778" layer="95" rot="MR180"/>
-</instance>
-<instance part="X1" gate="-24" x="66.04" y="129.54" smashed="yes">
-<attribute name="NAME" x="59.69" y="130.429" size="1.778" layer="95" rot="R180"/>
 </instance>
 <instance part="X1" gate="-25" x="33.02" y="127" smashed="yes" rot="MR0">
 <attribute name="NAME" x="39.37" y="127.889" size="1.778" layer="95" rot="MR180"/>
@@ -13156,12 +13133,6 @@ Isolated power supply, LDOs</text>
 <instance part="RN3" gate="-1" x="152.4" y="134.62" smashed="yes" rot="R180">
 <attribute name="VALUE" x="147.32" y="126.492" size="1.27" layer="96"/>
 <attribute name="NAME" x="155.575" y="134.747" size="1.27" layer="95"/>
-</instance>
-<instance part="SUPPLY43" gate="+5V" x="12.7" y="129.54" smashed="yes" rot="R90">
-<attribute name="VALUE" x="9.525" y="130.81" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="SUPPLY44" gate="+5V" x="76.2" y="129.54" smashed="yes" rot="R270">
-<attribute name="VALUE" x="79.375" y="129.54" size="1.778" layer="96"/>
 </instance>
 <instance part="U$25" gate="G$1" x="119.38" y="88.9" smashed="yes">
 <attribute name="VALUE" x="113.665" y="92.71" size="1.778" layer="96"/>
@@ -13934,18 +13905,6 @@ Isolated power supply, LDOs</text>
 <pinref part="IC3" gate="A" pin="B1"/>
 <wire x1="236.22" y1="111.76" x2="259.08" y2="111.76" width="0.1524" layer="91"/>
 <label x="259.08" y="112.395" size="1.27" layer="102" rot="MR0"/>
-</segment>
-</net>
-<net name="+5V" class="0">
-<segment>
-<pinref part="X1" gate="-23" pin="1"/>
-<wire x1="33.02" y1="129.54" x2="15.24" y2="129.54" width="0.1524" layer="91"/>
-<pinref part="SUPPLY43" gate="+5V" pin="+5V"/>
-</segment>
-<segment>
-<pinref part="X1" gate="-24" pin="1"/>
-<wire x1="66.04" y1="129.54" x2="73.66" y2="129.54" width="0.1524" layer="91"/>
-<pinref part="SUPPLY44" gate="+5V" pin="+5V"/>
 </segment>
 </net>
 <net name="-15V_ISO" class="0">
@@ -15553,14 +15512,14 @@ Isolated power supply, LDOs</text>
 </instance>
 <instance part="IC9" gate="B" x="162.56" y="66.04" smashed="yes" rot="R180">
 <attribute name="NAME" x="163.195" y="71.12" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="166.37" y="60.96" size="1.778" layer="96" rot="R180"/>
+<attribute name="VALUE" x="166.37" y="60.96" size="1.27" layer="96" rot="R180"/>
 </instance>
 <instance part="IC9" gate="P" x="25.4" y="35.56" smashed="yes">
 <attribute name="NAME" x="22.86" y="34.925" size="1.778" layer="95"/>
 </instance>
 <instance part="IC9" gate="A" x="162.56" y="144.78" smashed="yes" rot="R180">
 <attribute name="NAME" x="163.195" y="149.86" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="165.735" y="139.7" size="1.778" layer="96" rot="R180"/>
+<attribute name="VALUE" x="165.735" y="139.7" size="1.27" layer="96" rot="R180"/>
 </instance>
 <instance part="X3" gate="-1" x="238.76" y="124.46" rot="MR0"/>
 <instance part="X3" gate="-2" x="238.76" y="142.24" rot="R180"/>
@@ -19817,12 +19776,32 @@ Cold junction compensation</text>
 <approved hash="104,2,71.12,38.1,IC8C,VSS,GND,,,"/>
 <approved hash="104,2,71.12,30.48,IC8C,VSSA,GND,,,"/>
 <approved hash="104,2,71.12,17.78,IC8C,VREF+,N$121,,,"/>
+<approved hash="104,2,71.12,60.96,IC8C,VBAT,+3V3_MCU,,,"/>
+<approved hash="104,2,101.6,55.88,IC8C,VDD_3,+3V3_MCU,,,"/>
+<approved hash="104,2,101.6,53.34,IC8C,VDD_4,+3V3_MCU,,,"/>
+<approved hash="104,2,101.6,50.8,IC8C,VDD_5,+3V3_MCU,,,"/>
+<approved hash="104,2,101.6,48.26,IC8C,VDD_6,+3V3_MCU,,,"/>
+<approved hash="104,2,101.6,45.72,IC8C,VDD_7,+3V3_MCU,,,"/>
+<approved hash="104,2,101.6,43.18,IC8C,VDD_8,+3V3_MCU,,,"/>
+<approved hash="104,2,101.6,40.64,IC8C,VDD_9,+3V3_MCU,,,"/>
+<approved hash="104,2,101.6,38.1,IC8C,VDD_10,+3V3_MCU,,,"/>
+<approved hash="104,2,101.6,35.56,IC8C,VDD_11,+3V3_MCU,,,"/>
+<approved hash="104,2,101.6,33.02,IC8C,VDD,+3V3_MCU,,,"/>
 <approved hash="104,2,71.12,27.94,IC8C,VDDA,N$115,,,"/>
+<approved hash="104,2,101.6,60.96,IC8C,VDDUSB,+3V3_MCU,,,"/>
 <approved hash="104,2,101.6,20.32,IC8C,VCAP_1,N$113,,,"/>
 <approved hash="104,2,101.6,17.78,IC8C,VCAP_2,N$97,,,"/>
 <approved hash="104,2,231.14,139.7,J2,VDD,+3V3_ISO,,,"/>
 <approved hash="104,2,231.14,134.62,J2,VSS,GND,,,"/>
+<approved hash="104,6,195.58,63.5,IC36,REFGND,GND,,,"/>
 <approved hash="202,6,195.58,78.74,IC36,AUX_IN,,,,"/>
+<approved hash="104,6,195.58,76.2,IC36,AUX_GND,GND,,,"/>
+<approved hash="104,6,195.58,60.96,IC36,AVDD,ADC_AVDD,,,"/>
+<approved hash="104,6,195.58,53.34,IC36,AGND,GND,,,"/>
+<approved hash="104,6,226.06,53.34,IC36,DGND,GND,,,"/>
+<approved hash="104,6,226.06,60.96,IC36,DVDD,+3V3_ISO,,,"/>
+<approved hash="104,6,12.7,160.02,IC35P,V+,ADC_AVDD,,,"/>
+<approved hash="104,6,12.7,144.78,IC35P,V-,GND,,,"/>
 <approved hash="206,3,86.36,60.96,!DAC_ALARM,,,,,"/>
 <approved hash="206,3,86.36,139.7,!DAC_ALARM,,,,,"/>
 <approved hash="206,4,162.56,60.96,!OUT_FAULT,,,,,"/>
