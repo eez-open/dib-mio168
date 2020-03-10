@@ -12710,6 +12710,7 @@ Source: Samtec SSW.pdf</description>
 <part name="JP4" library="EEZ_Lib1" deviceset="JP2-CUT" device="-0805"/>
 <part name="U$25" library="EEZ_DIB" deviceset="+15V_ISO" device=""/>
 <part name="U$29" library="EEZ_DIB" deviceset="-15V_ISO" device=""/>
+<part name="U$31" library="EEZ_DIB" deviceset="+5V_ISO" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -16475,6 +16476,9 @@ Isolated power supply, LDOs</text>
 <attribute name="NAME" x="213.487" y="133.4516" size="1.778" layer="95"/>
 <attribute name="VALUE" x="210.947" y="131.2926" size="1.27" layer="96"/>
 </instance>
+<instance part="U$31" gate="A" x="132.08" y="35.56" smashed="yes" rot="R270">
+<attribute name="VALUE" x="135.255" y="33.655" size="1.27" layer="96" rot="R180"/>
+</instance>
 </instances>
 <busses>
 <bus name="DOUT[0..7]">
@@ -17240,16 +17244,16 @@ Isolated power supply, LDOs</text>
 <pinref part="X3" gate="-7" pin="1"/>
 </segment>
 </net>
-<net name="CLAMP" class="0">
+<net name="+5V_ISO" class="0">
 <segment>
 <pinref part="D5" gate="G$1" pin="C2"/>
 <wire x1="58.42" y1="33.02" x2="58.42" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="58.42" y1="35.56" x2="124.46" y2="35.56" width="0.1524" layer="91"/>
-<label x="142.24" y="36.195" size="1.27" layer="102" rot="MR0"/>
 <pinref part="D6" gate="G$1" pin="C2"/>
-<wire x1="124.46" y1="35.56" x2="142.24" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="35.56" x2="132.08" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="124.46" y1="33.02" x2="124.46" y2="35.56" width="0.1524" layer="91"/>
 <junction x="124.46" y="35.56"/>
+<pinref part="U$31" gate="A" pin="+5V_ISO"/>
 </segment>
 </net>
 </nets>
