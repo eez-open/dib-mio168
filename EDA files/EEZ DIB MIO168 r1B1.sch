@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.025" unitdist="inch" unit="inch" style="lines" multiple="4" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -11149,12 +11149,12 @@ This work is licensed under the &lt;i&gt;&lt;a href=https://www.tapr.org/OHL&gt;
 <gate name="B" symbol="N-MOSFET" x="0" y="-15.24" addlevel="always"/>
 </gates>
 <devices>
-<device name="" package="SC88">
+<device name=",115" package="SC88">
 <connects>
-<connect gate="A" pin="D" pad="3"/>
+<connect gate="A" pin="D" pad="6"/>
 <connect gate="A" pin="G" pad="2"/>
 <connect gate="A" pin="S" pad="1"/>
-<connect gate="B" pin="D" pad="6"/>
+<connect gate="B" pin="D" pad="3"/>
 <connect gate="B" pin="G" pad="5"/>
 <connect gate="B" pin="S" pad="4"/>
 </connects>
@@ -12685,10 +12685,10 @@ Source: Samtec SSW.pdf</description>
 <part name="R49" library="rcl" deviceset="R-EU_" device="R0805" value="27K"/>
 <part name="R50" library="rcl" deviceset="R-EU_" device="R0805" value="27K"/>
 <part name="R51" library="rcl" deviceset="R-EU_" device="R0805" value="27K"/>
-<part name="Q2" library="EEZ_DIB" deviceset="2N7002PS" device=""/>
-<part name="Q3" library="EEZ_DIB" deviceset="2N7002PS" device=""/>
-<part name="Q4" library="EEZ_DIB" deviceset="2N7002PS" device=""/>
-<part name="Q5" library="EEZ_DIB" deviceset="2N7002PS" device=""/>
+<part name="Q2" library="EEZ_DIB" deviceset="2N7002PS" device=",115"/>
+<part name="Q3" library="EEZ_DIB" deviceset="2N7002PS" device=",115"/>
+<part name="Q4" library="EEZ_DIB" deviceset="2N7002PS" device=",115"/>
+<part name="Q5" library="EEZ_DIB" deviceset="2N7002PS" device=",115"/>
 <part name="SUPPLY3" library="supply2" deviceset="GND" device=""/>
 <part name="R52" library="rcl" deviceset="R-EU_" device="R0805" value="1K"/>
 <part name="R53" library="rcl" deviceset="R-EU_" device="R0805" value="1K"/>
@@ -12698,7 +12698,7 @@ Source: Samtec SSW.pdf</description>
 <part name="R57" library="rcl" deviceset="R-EU_" device="R0805" value="1K"/>
 <part name="R58" library="rcl" deviceset="R-EU_" device="R0805" value="1K"/>
 <part name="R59" library="rcl" deviceset="R-EU_" device="R0805" value="1K"/>
-<part name="Q1" library="EEZ_DIB" deviceset="2N7002PS" device=""/>
+<part name="Q1" library="EEZ_DIB" deviceset="2N7002PS" device=",115"/>
 <part name="SUPPLY46" library="supply2" deviceset="GND" device=""/>
 <part name="C81" library="rcl" deviceset="C-EU" device="C0603" value="100n"/>
 <part name="C82" library="rcl" deviceset="C-EU" device="C0603" value="100n"/>
