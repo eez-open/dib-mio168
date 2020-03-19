@@ -12822,8 +12822,8 @@ Source: Samtec SSW.pdf</description>
 <part name="U$29" library="EEZ_DIB" deviceset="-15V_ISO" device=""/>
 <part name="U$31" library="EEZ_DIB" deviceset="+5V_ISO" device=""/>
 <part name="JP3" library="EEZ_Lib1" deviceset="JP3-CUT" device=""/>
-<part name="R31" library="rcl" deviceset="R-EU_" device="R0805" value="47R"/>
-<part name="R32" library="rcl" deviceset="R-EU_" device="R0805" value="47R"/>
+<part name="R31" library="rcl" deviceset="R-EU_" device="R0805" value="100R"/>
+<part name="R32" library="rcl" deviceset="R-EU_" device="R0805" value="100R"/>
 <part name="R80" library="rcl" deviceset="R-EU_" device="R1206" value="560K"/>
 <part name="R81" library="rcl" deviceset="R-EU_" device="R1206" value="560K"/>
 </parts>
