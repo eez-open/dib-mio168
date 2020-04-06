@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.025" unitdist="inch" unit="inch" style="lines" multiple="4" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -89,13 +89,8 @@
 <layer number="110" name="110" color="7" fill="1" visible="no" active="no"/>
 <layer number="111" name="111" color="7" fill="1" visible="no" active="no"/>
 <layer number="112" name="tSilk" color="7" fill="1" visible="no" active="no"/>
-<layer number="113" name="ReferenceLS" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="114" name="EEZ" color="12" fill="1" visible="yes" active="yes"/>
-<layer number="115" name="CH1" color="13" fill="1" visible="yes" active="yes"/>
 <layer number="116" name="Patch_BOT" color="7" fill="1" visible="no" active="no"/>
-<layer number="117" name="CH2" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="118" name="Rect_Pads" color="7" fill="1" visible="no" active="no"/>
-<layer number="119" name="CH3" color="12" fill="1" visible="yes" active="yes"/>
 <layer number="120" name="lotbs" color="7" fill="1" visible="no" active="no"/>
 <layer number="121" name="_tsilk" color="7" fill="1" visible="no" active="no"/>
 <layer number="122" name="_bsilk" color="7" fill="1" visible="no" active="no"/>
@@ -105,8 +100,6 @@
 <layer number="126" name="_bNames" color="7" fill="1" visible="no" active="no"/>
 <layer number="127" name="_tValues" color="7" fill="1" visible="no" active="no"/>
 <layer number="128" name="_bValues" color="7" fill="1" visible="no" active="no"/>
-<layer number="129" name="sram_cmd" color="13" fill="1" visible="yes" active="yes"/>
-<layer number="130" name="sram_ctrl" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="131" name="tAdjust" color="7" fill="1" visible="no" active="no"/>
 <layer number="132" name="bAdjust" color="7" fill="1" visible="no" active="no"/>
 <layer number="144" name="Drill_legend" color="7" fill="1" visible="no" active="no"/>
@@ -16393,9 +16386,6 @@ Isolated power supply, LDOs</text>
 <attribute name="NAME" x="100.33" y="168.275" size="1.778" layer="95" rot="MR180"/>
 <attribute name="VALUE" x="100.33" y="158.75" size="1.778" layer="96" rot="MR180"/>
 </instance>
-<instance part="IC12" gate="P" x="86.36" y="119.38" smashed="yes" rot="MR180">
-<attribute name="NAME" x="83.185" y="120.65" size="1.778" layer="95" rot="MR180"/>
-</instance>
 <instance part="FB4" gate="G$1" x="93.98" y="137.16" smashed="yes">
 <attribute name="NAME" x="92.075" y="138.5316" size="1.778" layer="95"/>
 <attribute name="VALUE" x="86.995" y="134.239" size="1.27" layer="96"/>
@@ -16602,6 +16592,9 @@ Isolated power supply, LDOs</text>
 <attribute name="NAME" x="121.92" y="16.7386" size="1.778" layer="95"/>
 <attribute name="VALUE" x="121.92" y="11.938" size="1.778" layer="96"/>
 </instance>
+<instance part="IC12" gate="P" x="86.36" y="119.38" smashed="yes">
+<attribute name="NAME" x="83.185" y="118.745" size="1.778" layer="95"/>
+</instance>
 </instances>
 <busses>
 <bus name="DOUT[0..7]">
@@ -16725,12 +16718,12 @@ Isolated power supply, LDOs</text>
 <junction x="76.2" y="149.86"/>
 </segment>
 <segment>
-<pinref part="IC12" gate="P" pin="V+"/>
 <pinref part="SUPPLY31" gate="GND" pin="GND"/>
 <wire x1="86.36" y1="109.22" x2="86.36" y2="111.76" width="0.1524" layer="91"/>
 <pinref part="C67" gate="G$1" pin="2"/>
 <wire x1="86.36" y1="111.76" x2="93.98" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="93.98" y1="111.76" x2="93.98" y2="116.84" width="0.1524" layer="91"/>
+<pinref part="IC12" gate="P" pin="V-"/>
 <junction x="86.36" y="111.76"/>
 </segment>
 <segment>
@@ -16823,13 +16816,13 @@ Isolated power supply, LDOs</text>
 <junction x="76.2" y="137.16"/>
 <pinref part="FB4" gate="G$1" pin="1"/>
 <wire x1="88.9" y1="137.16" x2="86.36" y2="137.16" width="0.1524" layer="91"/>
-<pinref part="IC12" gate="P" pin="V-"/>
 <wire x1="86.36" y1="137.16" x2="76.2" y2="137.16" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="127" x2="86.36" y2="137.16" width="0.1524" layer="91"/>
 <junction x="86.36" y="137.16"/>
 <pinref part="C67" gate="G$1" pin="1"/>
 <wire x1="86.36" y1="127" x2="93.98" y2="127" width="0.1524" layer="91"/>
 <wire x1="93.98" y1="127" x2="93.98" y2="124.46" width="0.1524" layer="91"/>
+<pinref part="IC12" gate="P" pin="V+"/>
 <junction x="86.36" y="127"/>
 </segment>
 </net>
