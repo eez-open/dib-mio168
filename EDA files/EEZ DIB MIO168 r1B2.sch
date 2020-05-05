@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.025" unitdist="inch" unit="inch" style="lines" multiple="4" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -89,6 +89,7 @@
 <layer number="110" name="110" color="7" fill="1" visible="no" active="no"/>
 <layer number="111" name="111" color="7" fill="1" visible="no" active="no"/>
 <layer number="112" name="tSilk" color="7" fill="1" visible="no" active="no"/>
+<layer number="114" name="EEZ" color="12" fill="1" visible="yes" active="yes"/>
 <layer number="116" name="Patch_BOT" color="7" fill="1" visible="no" active="no"/>
 <layer number="118" name="Rect_Pads" color="7" fill="1" visible="no" active="no"/>
 <layer number="120" name="lotbs" color="7" fill="1" visible="no" active="no"/>
@@ -2983,6 +2984,85 @@ Panasonic TS-HA series,  ECOS1VA103CA (10.000uF/35V)&lt;br&gt;Farnell: &lt;b&gt;
 <smd name="NC" x="1.4605" y="0" dx="0.508" dy="0.254" layer="1" rot="R180" stop="no" thermals="no" cream="no"/>
 <smd name="NO" x="-1.4605" y="0" dx="0.508" dy="0.254" layer="1" rot="R180" stop="no" thermals="no" cream="no"/>
 </package>
+<package name="PCB_TEST_TAB">
+<description>PCB mounting tab, 2.8 x 0.8 mm 378008.68&lt;br&gt;
+Buerklin: &lt;b&gt;05 F 142&lt;/b&gt;</description>
+<circle x="0" y="0" radius="1.796" width="0.127" layer="21"/>
+<pad name="P$1" x="0" y="0" drill="1.1" diameter="2.54" shape="octagon"/>
+<text x="2.54" y="1.27" size="1.27" layer="25">&gt;NAME</text>
+<text x="2.54" y="-1.27" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="EARTH_PIN">
+<pad name="P$1" x="0" y="0" drill="1.8" diameter="2.54" shape="long"/>
+<text x="-3.31" y="1.905" size="1.27" layer="21">&gt;NAME</text>
+<text x="-3.31" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
+<wire x1="-1.27" y1="1.524" x2="-1.27" y2="-1.524" width="0.1524" layer="21" curve="180"/>
+<wire x1="1.27" y1="-1.524" x2="1.27" y2="1.524" width="0.1524" layer="21" curve="180"/>
+</package>
+<package name="PCB_SHIELD_TAB">
+<circle x="0" y="0" radius="1.2" width="0.127" layer="21"/>
+<pad name="1" x="0" y="0" drill="1.1" shape="octagon"/>
+<text x="-2.8575" y="1.5875" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+</package>
+<package name="S1751-46R">
+<smd name="P$1" x="0" y="0" dx="3.7" dy="2.1" layer="1"/>
+<wire x1="-2.032" y1="1.27" x2="-1.905" y2="1.27" width="0.127" layer="21"/>
+<wire x1="-1.905" y1="1.27" x2="2.159" y2="1.27" width="0.127" layer="21"/>
+<wire x1="2.159" y1="1.27" x2="2.159" y2="-1.27" width="0.127" layer="21"/>
+<wire x1="2.159" y1="-1.27" x2="-2.159" y2="-1.27" width="0.127" layer="21"/>
+<wire x1="-2.159" y1="-1.27" x2="-2.159" y2="1.27" width="0.127" layer="21"/>
+<wire x1="-2.159" y1="1.27" x2="-2.032" y2="1.27" width="0.127" layer="21"/>
+<text x="-2.2225" y="1.5875" size="1.016" layer="25" ratio="10">&gt;NAME</text>
+<text x="-2.2225" y="-2.54" size="1.016" layer="27" ratio="10">&gt;VALUE</text>
+</package>
+<package name="JP2-NOCUT">
+<text x="-2.032" y="1.016" size="0.8128" layer="25" ratio="10">&gt;NAME</text>
+<polygon width="0.0254" layer="29">
+<vertex x="0" y="0.889"/>
+<vertex x="-0.1905" y="0.889" curve="90"/>
+<vertex x="-1.0795" y="0" curve="90"/>
+<vertex x="-0.1905" y="-0.889"/>
+<vertex x="0" y="-0.889"/>
+</polygon>
+<polygon width="0.0254" layer="1">
+<vertex x="-0.1905" y="0.762"/>
+<vertex x="-0.1905" y="0.254"/>
+<vertex x="0.3175" y="0.254"/>
+<vertex x="0.3175" y="-0.254"/>
+<vertex x="-0.1905" y="-0.254"/>
+<vertex x="-0.1905" y="-0.762" curve="-90"/>
+<vertex x="-0.9525" y="0" curve="-90"/>
+</polygon>
+<polygon width="0.0254" layer="1">
+<vertex x="0.1905" y="-0.762"/>
+<vertex x="0.1905" y="0.762" curve="-90"/>
+<vertex x="0.9525" y="0" curve="-90"/>
+</polygon>
+<smd name="1" x="-0.4445" y="0" dx="0.889" dy="0.254" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="2" x="0.635" y="0" dx="0.508" dy="0.254" layer="1" stop="no" thermals="no" cream="no"/>
+<polygon width="0.0254" layer="29">
+<vertex x="0" y="-0.889"/>
+<vertex x="0.1905" y="-0.889" curve="90"/>
+<vertex x="1.0795" y="0" curve="90"/>
+<vertex x="0.1905" y="0.889"/>
+<vertex x="0" y="0.889"/>
+</polygon>
+</package>
+<package name="JP2-0805-NOCUT">
+<smd name="1" x="-0.95" y="0" dx="1.3" dy="1.5" layer="1"/>
+<smd name="2" x="0.95" y="0" dx="1.3" dy="1.5" layer="1"/>
+<wire x1="-1.973" y1="0.983" x2="1.973" y2="0.983" width="0.127" layer="39"/>
+<wire x1="1.973" y1="0.983" x2="1.973" y2="-0.983" width="0.127" layer="39"/>
+<wire x1="1.973" y1="-0.983" x2="-1.973" y2="-0.983" width="0.127" layer="39"/>
+<wire x1="-1.973" y1="-0.983" x2="-1.973" y2="0.983" width="0.127" layer="39"/>
+<text x="-2.032" y="1.143" size="1.016" layer="25" ratio="10">&gt;NAME</text>
+<polygon width="0.0254" layer="1">
+<vertex x="-0.4445" y="0.254"/>
+<vertex x="0.4445" y="0.254"/>
+<vertex x="0.5715" y="-0.254"/>
+<vertex x="-0.4445" y="-0.254"/>
+</polygon>
+</package>
 </packages>
 <symbols>
 <symbol name="L_POINT_V">
@@ -3698,6 +3778,23 @@ Panasonic TS-HA series,  ECOS1VA103CA (10.000uF/35V)&lt;br&gt;Farnell: &lt;b&gt;
 <wire x1="0" y1="-1.778" x2="-0.254" y2="-1.524" width="0.508" layer="94" curve="-90" cap="flat"/>
 <wire x1="-0.254" y1="-1.016" x2="0.254" y2="-1.016" width="0.508" layer="94" curve="-180" cap="flat"/>
 <wire x1="0" y1="-1.778" x2="0" y2="0.762" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="TEST_TAB">
+<wire x1="0" y1="0" x2="-2.54" y2="0" width="0.254" layer="94"/>
+<circle x="0.635" y="0" radius="0.635" width="0.254" layer="94"/>
+<text x="0" y="1.905" size="1.778" layer="95">&gt;NAME</text>
+<text x="0" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="P$1" x="-2.54" y="0" visible="off" length="point" rot="R180"/>
+</symbol>
+<symbol name="JP2-NOCUT">
+<text x="-3.175" y="1.27" size="1.778" layer="95">&gt;NAME</text>
+<pin name="2" x="2.54" y="0" visible="off" length="point" direction="pas" rot="R270"/>
+<wire x1="2.54" y1="0" x2="1.778" y2="0" width="0.1524" layer="94"/>
+<wire x1="1.524" y1="0.254" x2="1.778" y2="0" width="0.508" layer="94" curve="-90" cap="flat"/>
+<wire x1="1.778" y1="0" x2="1.524" y2="-0.254" width="0.508" layer="94" curve="-90" cap="flat"/>
+<wire x1="1.016" y1="-0.254" x2="1.016" y2="0.254" width="0.508" layer="94" curve="-180" cap="flat"/>
+<wire x1="1.778" y1="0" x2="0" y2="0" width="0.1524" layer="94"/>
+<pin name="1" x="0" y="0" visible="off" length="point" direction="pas" rot="R270"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -4930,6 +5027,70 @@ Farnell: &lt;b&gt;2423288&lt;/b&gt;</description>
 <connect gate="G$1" pin="COM" pad="COM"/>
 <connect gate="G$1" pin="NC" pad="NC"/>
 <connect gate="G$1" pin="NO" pad="NO"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="PCB_TEST_TAB" prefix="TP" uservalue="yes">
+<gates>
+<gate name="G$1" symbol="TEST_TAB" x="0" y="0"/>
+</gates>
+<devices>
+<device name="TEST_TAB" package="PCB_TEST_TAB">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="EARTH_PIN" package="EARTH_PIN">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="SHIELD" package="PCB_SHIELD_TAB">
+<connects>
+<connect gate="G$1" pin="P$1" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="SMD" package="S1751-46R">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="JP2-NOCUT" prefix="JP">
+<gates>
+<gate name="G$1" symbol="JP2-NOCUT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="JP2-NOCUT">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="-0805" package="JP2-0805-NOCUT">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -12809,16 +12970,19 @@ Source: Samtec SSW.pdf</description>
 <part name="U$6" library="EEZ_DIB" deviceset="-12V_ISO" device=""/>
 <part name="U$7" library="EEZ_DIB" deviceset="+12V_ISO" device=""/>
 <part name="D2" library="diode" deviceset="BAT54S" device="" value="BAT54SFILM"/>
-<part name="JP4" library="EEZ_Lib1" deviceset="JP2-CUT" device="-0805"/>
 <part name="JP5" library="EEZ_Lib1" deviceset="JP2-CUT" device="-0805"/>
+<part name="JP6" library="EEZ_Lib1" deviceset="JP2-CUT" device="-0805"/>
 <part name="U$25" library="EEZ_DIB" deviceset="+15V_ISO" device=""/>
 <part name="U$29" library="EEZ_DIB" deviceset="-15V_ISO" device=""/>
 <part name="U$31" library="EEZ_DIB" deviceset="+5V_ISO" device=""/>
-<part name="JP3" library="EEZ_Lib1" deviceset="JP3-CUT" device=""/>
+<part name="JP4" library="EEZ_Lib1" deviceset="JP3-CUT" device=""/>
 <part name="R31" library="rcl" deviceset="R-EU_" device="R0805" value="100R"/>
 <part name="R32" library="rcl" deviceset="R-EU_" device="R0805" value="100R"/>
 <part name="R80" library="rcl" deviceset="R-EU_" device="R1206" value="560K"/>
 <part name="R81" library="rcl" deviceset="R-EU_" device="R1206" value="560K"/>
+<part name="GND" library="EEZ_Lib1" deviceset="PCB_TEST_TAB" device="SHIELD"/>
+<part name="SUPPLY27" library="supply2" deviceset="GND" device=""/>
+<part name="JP3" library="EEZ_Lib1" deviceset="JP2-NOCUT" device="-0805"/>
 </parts>
 <sheets>
 <sheet>
@@ -13180,16 +13344,6 @@ Isolated power supply, LDOs</text>
 <instance part="SUPPLY42" gate="GND" x="238.76" y="129.54" smashed="yes">
 <attribute name="VALUE" x="236.22" y="127.635" size="1.778" layer="96" rot="MR180"/>
 </instance>
-<instance part="RN1" gate="-1" x="248.92" y="149.86" smashed="yes">
-<attribute name="VALUE" x="241.3" y="153.162" size="1.27" layer="96"/>
-<attribute name="NAME" x="246.38" y="149.987" size="1.27" layer="95" rot="MR0"/>
-</instance>
-<instance part="RN1" gate="-2" x="248.92" y="147.32" smashed="yes">
-<attribute name="NAME" x="246.38" y="147.447" size="1.27" layer="95" rot="MR0"/>
-</instance>
-<instance part="RN1" gate="-3" x="248.92" y="144.78" smashed="yes">
-<attribute name="NAME" x="246.38" y="144.907" size="1.27" layer="95" rot="MR0"/>
-</instance>
 <instance part="+3V2" gate="G$1" x="190.5" y="167.64" smashed="yes">
 <attribute name="VALUE" x="191.77" y="167.005" size="1.778" layer="96"/>
 </instance>
@@ -13249,6 +13403,19 @@ Isolated power supply, LDOs</text>
 <instance part="U$29" gate="G$1" x="119.38" y="38.1" smashed="yes" rot="R180">
 <attribute name="VALUE" x="114.3" y="33.02" size="1.778" layer="96"/>
 </instance>
+<instance part="GND" gate="G$1" x="160.02" y="63.5" smashed="yes">
+<attribute name="NAME" x="157.48" y="64.77" size="1.778" layer="95"/>
+<attribute name="VALUE" x="160.02" y="60.96" size="1.778" layer="96"/>
+</instance>
+<instance part="RN1" gate="-4" x="248.92" y="149.86" smashed="yes">
+<attribute name="NAME" x="243.84" y="146.812" size="1.778" layer="95"/>
+</instance>
+<instance part="RN1" gate="-1" x="248.92" y="144.78" smashed="yes">
+<attribute name="VALUE" x="251.46" y="141.732" size="1.778" layer="96"/>
+<attribute name="NAME" x="243.84" y="141.732" size="1.778" layer="95"/>
+</instance>
+<instance part="RN1" gate="-3" x="248.92" y="142.24"/>
+<instance part="RN1" gate="-2" x="248.92" y="147.32"/>
 </instances>
 <busses>
 </busses>
@@ -13597,10 +13764,8 @@ Isolated power supply, LDOs</text>
 <net name="DIB_BOOT" class="0">
 <segment>
 <pinref part="X1" gate="-26" pin="1"/>
-<wire x1="66.04" y1="127" x2="73.66" y2="127" width="0.1524" layer="91"/>
-<wire x1="73.66" y1="127" x2="73.66" y2="124.46" width="0.1524" layer="91"/>
-<wire x1="73.66" y1="124.46" x2="86.36" y2="124.46" width="0.1524" layer="91"/>
-<label x="86.36" y="125.095" size="1.27" layer="102" rot="MR0"/>
+<wire x1="66.04" y1="127" x2="81.28" y2="127" width="0.1524" layer="91"/>
+<label x="81.28" y="127.635" size="1.27" layer="102" rot="MR0"/>
 </segment>
 <segment>
 <pinref part="IC3" gate="A" pin="A2"/>
@@ -13669,6 +13834,9 @@ Isolated power supply, LDOs</text>
 <pinref part="C11" gate="G$1" pin="1"/>
 <wire x1="119.38" y1="63.5" x2="119.38" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="SUPPLY7" gate="GND" pin="GND"/>
+<pinref part="GND" gate="G$1" pin="P$1"/>
+<wire x1="157.48" y1="63.5" x2="154.94" y2="63.5" width="0.1524" layer="91"/>
+<junction x="154.94" y="63.5"/>
 </segment>
 <segment>
 <pinref part="C3" gate="G$1" pin="1"/>
@@ -13931,7 +14099,7 @@ Isolated power supply, LDOs</text>
 <segment>
 <wire x1="254" y1="149.86" x2="261.62" y2="149.86" width="0.1524" layer="91"/>
 <label x="260.985" y="150.495" size="1.27" layer="102" rot="MR0"/>
-<pinref part="RN1" gate="-1" pin="2"/>
+<pinref part="RN1" gate="-4" pin="2"/>
 </segment>
 </net>
 <net name="SCLK" class="0">
@@ -13951,8 +14119,8 @@ Isolated power supply, LDOs</text>
 <net name="MISO" class="0">
 <segment>
 <label x="260.985" y="142.875" size="1.27" layer="102" rot="MR0"/>
-<wire x1="236.22" y1="142.24" x2="261.62" y2="142.24" width="0.1524" layer="91"/>
-<pinref part="IC2" gate="A" pin="B4"/>
+<wire x1="254" y1="142.24" x2="261.62" y2="142.24" width="0.1524" layer="91"/>
+<pinref part="RN1" gate="-3" pin="2"/>
 </segment>
 </net>
 <net name="IRQ" class="0">
@@ -13966,28 +14134,28 @@ Isolated power supply, LDOs</text>
 <segment>
 <wire x1="254" y1="144.78" x2="261.62" y2="144.78" width="0.1524" layer="91"/>
 <label x="260.985" y="145.415" size="1.27" layer="102" rot="MR0"/>
-<pinref part="RN1" gate="-3" pin="2"/>
+<pinref part="RN1" gate="-1" pin="2"/>
 </segment>
 </net>
 <net name="N$12" class="0">
 <segment>
 <wire x1="236.22" y1="149.86" x2="243.84" y2="149.86" width="0.1524" layer="91"/>
-<pinref part="RN1" gate="-1" pin="1"/>
 <pinref part="IC2" gate="A" pin="B1"/>
+<pinref part="RN1" gate="-4" pin="1"/>
 </segment>
 </net>
 <net name="N$116" class="0">
 <segment>
 <wire x1="236.22" y1="147.32" x2="243.84" y2="147.32" width="0.1524" layer="91"/>
-<pinref part="RN1" gate="-2" pin="1"/>
 <pinref part="IC2" gate="A" pin="B2"/>
+<pinref part="RN1" gate="-2" pin="1"/>
 </segment>
 </net>
 <net name="N$118" class="0">
 <segment>
 <wire x1="236.22" y1="144.78" x2="243.84" y2="144.78" width="0.1524" layer="91"/>
-<pinref part="RN1" gate="-3" pin="1"/>
 <pinref part="IC2" gate="A" pin="B3"/>
+<pinref part="RN1" gate="-1" pin="1"/>
 </segment>
 </net>
 <net name="BOOT0" class="0">
@@ -14048,6 +14216,13 @@ Isolated power supply, LDOs</text>
 <pinref part="U$25" gate="G$1" pin="+15V_ISO"/>
 <wire x1="119.38" y1="86.36" x2="119.38" y2="88.9" width="0.1524" layer="91"/>
 <junction x="119.38" y="86.36"/>
+</segment>
+</net>
+<net name="N$72" class="0">
+<segment>
+<pinref part="IC2" gate="A" pin="B4"/>
+<wire x1="243.84" y1="142.24" x2="236.22" y2="142.24" width="0.1524" layer="91"/>
+<pinref part="RN1" gate="-3" pin="1"/>
 </segment>
 </net>
 </nets>
@@ -14283,6 +14458,12 @@ Isolated power supply, LDOs</text>
 <instance part="SH1" gate="SH" x="104.14" y="73.66" smashed="yes" rot="R90">
 <attribute name="NAME" x="103.505" y="71.4375" size="1.778" layer="95" rot="R90"/>
 </instance>
+<instance part="SUPPLY27" gate="GND" x="15.24" y="93.98" smashed="yes">
+<attribute name="VALUE" x="13.335" y="92.71" size="1.778" layer="96" rot="MR0"/>
+</instance>
+<instance part="JP3" gate="G$1" x="20.32" y="111.76" smashed="yes">
+<attribute name="NAME" x="19.05" y="109.22" size="1.778" layer="95"/>
+</instance>
 </instances>
 <busses>
 <bus name="CURR_SW[0..3]">
@@ -14317,16 +14498,16 @@ Isolated power supply, LDOs</text>
 </bus>
 <bus name="DOUT[0..7]">
 <segment>
-<wire x1="182.88" y1="170.18" x2="175.26" y2="170.18" width="0.762" layer="92"/>
-<wire x1="175.26" y1="170.18" x2="96.52" y2="170.18" width="0.762" layer="92"/>
+<wire x1="185.42" y1="170.18" x2="177.8" y2="170.18" width="0.762" layer="92"/>
+<wire x1="177.8" y1="170.18" x2="96.52" y2="170.18" width="0.762" layer="92"/>
 <wire x1="96.52" y1="170.18" x2="12.7" y2="170.18" width="0.762" layer="92"/>
 <wire x1="12.7" y1="170.18" x2="10.16" y2="167.64" width="0.762" layer="92"/>
 <wire x1="10.16" y1="167.64" x2="10.16" y2="116.84" width="0.762" layer="92"/>
-<label x="175.26" y="171.45" size="1.27" layer="102"/>
+<label x="177.8" y="171.45" size="1.27" layer="102"/>
 <wire x1="96.52" y1="170.18" x2="93.98" y2="167.64" width="0.762" layer="92"/>
 <wire x1="93.98" y1="167.64" x2="93.98" y2="149.86" width="0.762" layer="92"/>
-<wire x1="175.26" y1="170.18" x2="172.72" y2="167.64" width="0.762" layer="92"/>
-<wire x1="172.72" y1="167.64" x2="172.72" y2="144.78" width="0.762" layer="92"/>
+<wire x1="177.8" y1="170.18" x2="175.26" y2="167.64" width="0.762" layer="92"/>
+<wire x1="175.26" y1="167.64" x2="175.26" y2="144.78" width="0.762" layer="92"/>
 </segment>
 </bus>
 <bus name="VOLT_SW[0..3]">
@@ -14489,6 +14670,12 @@ Isolated power supply, LDOs</text>
 <wire x1="226.06" y1="134.62" x2="226.06" y2="121.92" width="0.1524" layer="91"/>
 <pinref part="J2" gate="G$1" pin="VSS"/>
 </segment>
+<segment>
+<pinref part="JP3" gate="G$1" pin="1"/>
+<wire x1="20.32" y1="111.76" x2="15.24" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="15.24" y1="111.76" x2="15.24" y2="96.52" width="0.1524" layer="91"/>
+<pinref part="SUPPLY27" gate="GND" pin="GND"/>
+</segment>
 </net>
 <net name="SWDIO" class="0">
 <segment>
@@ -14635,23 +14822,23 @@ Isolated power supply, LDOs</text>
 </net>
 <net name="SCLK" class="0">
 <segment>
-<pinref part="IC8" gate="A" pin="PB13"/>
-<wire x1="43.18" y1="83.82" x2="30.48" y2="83.82" width="0.1524" layer="91"/>
-<label x="30.48" y="84.455" size="1.27" layer="102"/>
+<wire x1="129.54" y1="129.54" x2="106.68" y2="129.54" width="0.1524" layer="91"/>
+<label x="106.68" y="130.175" size="1.27" layer="102"/>
+<pinref part="IC8" gate="B" pin="PE12"/>
 </segment>
 </net>
 <net name="MISO" class="0">
 <segment>
-<pinref part="IC8" gate="A" pin="PB14"/>
-<wire x1="43.18" y1="81.28" x2="30.48" y2="81.28" width="0.1524" layer="91"/>
-<label x="30.48" y="81.915" size="1.27" layer="102"/>
+<wire x1="129.54" y1="127" x2="106.68" y2="127" width="0.1524" layer="91"/>
+<label x="106.68" y="127.635" size="1.27" layer="102"/>
+<pinref part="IC8" gate="B" pin="PE13"/>
 </segment>
 </net>
 <net name="MOSI" class="0">
 <segment>
-<pinref part="IC8" gate="A" pin="PB15"/>
-<wire x1="43.18" y1="78.74" x2="30.48" y2="78.74" width="0.1524" layer="91"/>
-<label x="30.48" y="79.375" size="1.27" layer="102"/>
+<wire x1="129.54" y1="124.46" x2="106.68" y2="124.46" width="0.1524" layer="91"/>
+<label x="106.68" y="125.095" size="1.27" layer="102"/>
+<pinref part="IC8" gate="B" pin="PE14"/>
 </segment>
 </net>
 <net name="CURR_SW3" class="0">
@@ -14874,16 +15061,16 @@ Isolated power supply, LDOs</text>
 <net name="DOUT2" class="0">
 <segment>
 <pinref part="IC8" gate="B" pin="PG6"/>
-<wire x1="160.02" y1="144.78" x2="170.18" y2="144.78" width="0.1524" layer="91"/>
-<wire x1="172.72" y1="147.32" x2="170.18" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="144.78" x2="172.72" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="147.32" x2="172.72" y2="144.78" width="0.1524" layer="91"/>
 <label x="161.925" y="145.415" size="1.27" layer="102"/>
 </segment>
 </net>
 <net name="DOUT3" class="0">
 <segment>
 <pinref part="IC8" gate="B" pin="PG7"/>
-<wire x1="160.02" y1="142.24" x2="170.18" y2="142.24" width="0.1524" layer="91"/>
-<wire x1="172.72" y1="144.78" x2="170.18" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="142.24" x2="172.72" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="144.78" x2="172.72" y2="142.24" width="0.1524" layer="91"/>
 <label x="161.925" y="142.875" size="1.27" layer="102"/>
 </segment>
 </net>
@@ -14897,36 +15084,36 @@ Isolated power supply, LDOs</text>
 <net name="!DAC_CS_DUAL" class="0">
 <segment>
 <label x="12.7" y="150.495" size="1.27" layer="102"/>
-<pinref part="RN5" gate="-1" pin="1"/>
 <wire x1="25.4" y1="149.86" x2="12.7" y2="149.86" width="0.1524" layer="91"/>
+<pinref part="RN5" gate="-1" pin="1"/>
 </segment>
 </net>
 <net name="DAC_SCLK" class="0">
 <segment>
 <label x="12.7" y="147.955" size="1.27" layer="102"/>
-<pinref part="RN5" gate="-2" pin="1"/>
 <wire x1="25.4" y1="147.32" x2="12.7" y2="147.32" width="0.1524" layer="91"/>
+<pinref part="RN5" gate="-2" pin="1"/>
 </segment>
 </net>
 <net name="DAC_MISO" class="0">
 <segment>
 <label x="12.7" y="145.415" size="1.27" layer="102"/>
-<pinref part="RN5" gate="-3" pin="1"/>
 <wire x1="25.4" y1="144.78" x2="12.7" y2="144.78" width="0.1524" layer="91"/>
+<pinref part="RN5" gate="-3" pin="1"/>
 </segment>
 </net>
 <net name="DAC_MOSI" class="0">
 <segment>
 <label x="12.7" y="142.875" size="1.27" layer="102"/>
-<pinref part="RN5" gate="-4" pin="1"/>
 <wire x1="25.4" y1="142.24" x2="12.7" y2="142.24" width="0.1524" layer="91"/>
+<pinref part="RN5" gate="-4" pin="1"/>
 </segment>
 </net>
 <net name="!OUT_FAULT" class="0">
 <segment>
-<pinref part="IC8" gate="A" pin="PB2-BOOT1"/>
-<wire x1="43.18" y1="111.76" x2="30.48" y2="111.76" width="0.1524" layer="91"/>
-<label x="30.48" y="112.395" size="1.27" layer="102"/>
+<label x="161.925" y="153.035" size="1.27" layer="102"/>
+<pinref part="IC8" gate="B" pin="PG3"/>
+<wire x1="160.02" y1="152.4" x2="172.72" y2="152.4" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="OUT_EN" class="0">
@@ -14938,9 +15125,9 @@ Isolated power supply, LDOs</text>
 </net>
 <net name="NSS" class="0">
 <segment>
-<pinref part="IC8" gate="A" pin="PB12"/>
-<wire x1="43.18" y1="86.36" x2="30.48" y2="86.36" width="0.1524" layer="91"/>
-<label x="30.48" y="86.995" size="1.27" layer="102"/>
+<wire x1="129.54" y1="132.08" x2="106.68" y2="132.08" width="0.1524" layer="91"/>
+<label x="106.68" y="132.715" size="1.27" layer="102"/>
+<pinref part="IC8" gate="B" pin="PE11"/>
 </segment>
 </net>
 <net name="PWM#1" class="0">
@@ -14986,9 +15173,9 @@ Isolated power supply, LDOs</text>
 <pinref part="J2" gate="G$1" pin="SW1"/>
 </segment>
 <segment>
-<pinref part="IC8" gate="A" pin="PD15"/>
-<wire x1="78.74" y1="78.74" x2="91.44" y2="78.74" width="0.1524" layer="91"/>
-<label x="91.44" y="79.375" size="1.27" layer="102" rot="MR0"/>
+<label x="30.48" y="122.555" size="1.27" layer="102"/>
+<pinref part="IC8" gate="A" pin="PA15"/>
+<wire x1="43.18" y1="121.92" x2="30.48" y2="121.92" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SDIO_D0" class="0">
@@ -15169,34 +15356,6 @@ Isolated power supply, LDOs</text>
 <label x="91.44" y="89.535" size="1.27" layer="102" rot="MR0"/>
 </segment>
 </net>
-<net name="N$11" class="0">
-<segment>
-<pinref part="RN5" gate="-1" pin="2"/>
-<pinref part="IC8" gate="A" pin="PA4"/>
-<wire x1="35.56" y1="149.86" x2="43.18" y2="149.86" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$29" class="0">
-<segment>
-<pinref part="RN5" gate="-2" pin="2"/>
-<pinref part="IC8" gate="A" pin="PA5"/>
-<wire x1="35.56" y1="147.32" x2="43.18" y2="147.32" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$34" class="0">
-<segment>
-<pinref part="RN5" gate="-3" pin="2"/>
-<pinref part="IC8" gate="A" pin="PA6"/>
-<wire x1="35.56" y1="144.78" x2="43.18" y2="144.78" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$37" class="0">
-<segment>
-<pinref part="RN5" gate="-4" pin="2"/>
-<pinref part="IC8" gate="A" pin="PA7"/>
-<wire x1="35.56" y1="142.24" x2="43.18" y2="142.24" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$39" class="0">
 <segment>
 <pinref part="RN4" gate="-1" pin="2"/>
@@ -15356,6 +15515,41 @@ Isolated power supply, LDOs</text>
 <pinref part="IC8" gate="B" pin="PF3"/>
 <wire x1="116.84" y1="109.22" x2="129.54" y2="109.22" width="0.1524" layer="91"/>
 <label x="127.635" y="109.855" size="1.27" layer="102" rot="MR0"/>
+</segment>
+</net>
+<net name="N$81" class="0">
+<segment>
+<pinref part="IC8" gate="A" pin="PA4"/>
+<wire x1="35.56" y1="149.86" x2="43.18" y2="149.86" width="0.1524" layer="91"/>
+<pinref part="RN5" gate="-1" pin="2"/>
+</segment>
+</net>
+<net name="N$98" class="0">
+<segment>
+<pinref part="IC8" gate="A" pin="PA5"/>
+<wire x1="35.56" y1="147.32" x2="43.18" y2="147.32" width="0.1524" layer="91"/>
+<pinref part="RN5" gate="-2" pin="2"/>
+</segment>
+</net>
+<net name="N$100" class="0">
+<segment>
+<pinref part="IC8" gate="A" pin="PA6"/>
+<wire x1="35.56" y1="144.78" x2="43.18" y2="144.78" width="0.1524" layer="91"/>
+<pinref part="RN5" gate="-3" pin="2"/>
+</segment>
+</net>
+<net name="N$103" class="0">
+<segment>
+<pinref part="IC8" gate="A" pin="PA7"/>
+<wire x1="35.56" y1="142.24" x2="43.18" y2="142.24" width="0.1524" layer="91"/>
+<pinref part="RN5" gate="-4" pin="2"/>
+</segment>
+</net>
+<net name="N$11" class="0">
+<segment>
+<pinref part="IC8" gate="A" pin="PB2-BOOT1"/>
+<wire x1="43.18" y1="111.76" x2="22.86" y2="111.76" width="0.1524" layer="91"/>
+<pinref part="JP3" gate="G$1" pin="2"/>
 </segment>
 </net>
 </nets>
@@ -18806,13 +19000,13 @@ Cold junction compensation</text>
 <instance part="X4" gate="-6" x="17.78" y="40.64"/>
 <instance part="X4" gate="-7" x="17.78" y="33.02"/>
 <instance part="X4" gate="-8" x="17.78" y="10.16"/>
-<instance part="JP4" gate="G$1" x="73.66" y="66.04" smashed="yes">
+<instance part="JP5" gate="G$1" x="73.66" y="66.04" smashed="yes">
 <attribute name="NAME" x="72.39" y="62.865" size="1.778" layer="95"/>
 </instance>
-<instance part="JP5" gate="G$1" x="73.66" y="38.1" smashed="yes">
+<instance part="JP6" gate="G$1" x="73.66" y="38.1" smashed="yes">
 <attribute name="NAME" x="72.39" y="34.925" size="1.778" layer="95"/>
 </instance>
-<instance part="JP3" gate="G$1" x="83.82" y="144.78" smashed="yes" rot="MR0">
+<instance part="JP4" gate="G$1" x="83.82" y="144.78" smashed="yes" rot="MR0">
 <attribute name="NAME" x="84.455" y="144.145" size="1.778" layer="95"/>
 </instance>
 <instance part="R80" gate="G$1" x="15.24" y="22.86" smashed="yes">
@@ -19308,7 +19502,7 @@ Cold junction compensation</text>
 <pinref part="IC35" gate="A" pin="OUT"/>
 <wire x1="66.04" y1="132.08" x2="63.5" y2="132.08" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="132.08" x2="63.5" y2="139.7" width="0.1524" layer="91"/>
-<pinref part="JP3" gate="G$1" pin="NC"/>
+<pinref part="JP4" gate="G$1" pin="NC"/>
 <wire x1="83.82" y1="142.24" x2="83.82" y2="139.7" width="0.1524" layer="91"/>
 <junction x="83.82" y="139.7"/>
 </segment>
@@ -19614,7 +19808,7 @@ Cold junction compensation</text>
 <wire x1="38.1" y1="60.96" x2="33.02" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="38.1" y1="60.96" x2="38.1" y2="66.04" width="0.1524" layer="91"/>
 <junction x="38.1" y="60.96"/>
-<pinref part="JP4" gate="G$1" pin="1"/>
+<pinref part="JP5" gate="G$1" pin="1"/>
 <wire x1="38.1" y1="66.04" x2="73.66" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -19627,7 +19821,7 @@ Cold junction compensation</text>
 <wire x1="40.64" y1="33.02" x2="38.1" y2="33.02" width="0.1524" layer="91"/>
 <junction x="33.02" y="33.02"/>
 <pinref part="FB9" gate="G$1" pin="2"/>
-<pinref part="JP5" gate="G$1" pin="1"/>
+<pinref part="JP6" gate="G$1" pin="1"/>
 <wire x1="38.1" y1="33.02" x2="33.02" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="73.66" y1="38.1" x2="38.1" y2="38.1" width="0.1524" layer="91"/>
 <wire x1="38.1" y1="38.1" x2="38.1" y2="33.02" width="0.1524" layer="91"/>
@@ -19676,7 +19870,7 @@ Cold junction compensation</text>
 <wire x1="121.92" y1="22.86" x2="121.92" y2="33.02" width="0.1524" layer="91"/>
 <junction x="121.92" y="33.02"/>
 <pinref part="R79" gate="G$1" pin="1"/>
-<pinref part="JP5" gate="G$1" pin="2"/>
+<pinref part="JP6" gate="G$1" pin="2"/>
 <wire x1="76.2" y1="38.1" x2="121.92" y2="38.1" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="38.1" x2="121.92" y2="33.02" width="0.1524" layer="91"/>
 </segment>
@@ -19791,7 +19985,7 @@ Cold junction compensation</text>
 <wire x1="121.92" y1="50.8" x2="121.92" y2="60.96" width="0.1524" layer="91"/>
 <junction x="121.92" y="60.96"/>
 <pinref part="R75" gate="G$1" pin="1"/>
-<pinref part="JP4" gate="G$1" pin="2"/>
+<pinref part="JP5" gate="G$1" pin="2"/>
 <wire x1="76.2" y1="66.04" x2="121.92" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="66.04" x2="121.92" y2="60.96" width="0.1524" layer="91"/>
 </segment>
@@ -19921,7 +20115,7 @@ Cold junction compensation</text>
 </net>
 <net name="1V25_REF" class="0">
 <segment>
-<pinref part="JP3" gate="G$1" pin="NO"/>
+<pinref part="JP4" gate="G$1" pin="NO"/>
 <wire x1="83.82" y1="147.32" x2="83.82" y2="149.86" width="0.1524" layer="91"/>
 <wire x1="83.82" y1="149.86" x2="93.98" y2="149.86" width="0.1524" layer="91"/>
 <label x="93.98" y="150.495" size="1.27" layer="102" rot="MR0"/>
@@ -19931,7 +20125,7 @@ Cold junction compensation</text>
 <segment>
 <pinref part="IC21" gate="B" pin="COM"/>
 <wire x1="58.42" y1="142.24" x2="60.96" y2="142.24" width="0.1524" layer="91"/>
-<pinref part="JP3" gate="G$1" pin="COM"/>
+<pinref part="JP4" gate="G$1" pin="COM"/>
 <wire x1="81.28" y1="144.78" x2="60.96" y2="144.78" width="0.1524" layer="91"/>
 <wire x1="60.96" y1="144.78" x2="60.96" y2="142.24" width="0.1524" layer="91"/>
 <junction x="60.96" y="142.24"/>
@@ -19951,8 +20145,8 @@ Cold junction compensation</text>
 </sheets>
 <errors>
 <approved hash="104,4,63.5,137.16,IC13,VDD,N$71,,,"/>
-<approved hash="104,4,86.36,111.76,IC12P,V+,GND,,,"/>
-<approved hash="104,4,86.36,127,IC12P,V-,N$71,,,"/>
+<approved hash="104,4,86.36,127,IC12P,V+,N$71,,,"/>
+<approved hash="104,4,86.36,111.76,IC12P,V-,GND,,,"/>
 <approved hash="104,3,116.84,43.18,IC11,AVSS,-12V_ISO,,,"/>
 <approved hash="104,3,86.36,53.34,IC11,DVDD,+3V3_ISO,,,"/>
 <approved hash="104,3,86.36,50.8,IC11,DVDD-EN,GND,,,"/>
@@ -20013,6 +20207,7 @@ Cold junction compensation</text>
 <approved hash="206,3,86.36,149.86,DAC_MISO,,,,,"/>
 <approved hash="206,3,86.36,71.12,DAC_MISO,,,,,"/>
 <approved hash="206,4,35.56,17.78,N$129,,,,,"/>
+<approved hash="206,4,45.72,27.94,N$129,,,,,"/>
 <approved hash="206,4,104.14,17.78,N$134,,,,,"/>
 <approved hash="206,4,114.3,27.94,N$134,,,,,"/>
 <approved hash="113,1,131.976,90.066,FRAME7,,,,,"/>
@@ -20029,6 +20224,7 @@ Cold junction compensation</text>
 <approved hash="113,6,26.9494,41.203,SH7,,,,,"/>
 <approved hash="113,6,26.9494,97.083,SH5,,,,,"/>
 <approved hash="113,2,103.577,72.6694,SH1,,,,,"/>
+<approved hash="113,1,159.433,64.3805,GND,,,,,"/>
 </errors>
 </schematic>
 </drawing>
