@@ -11951,7 +11951,7 @@ This work is licensed under the &lt;i&gt;&lt;a href=https://www.tapr.org/OHL&gt;
 <pin name="+VSENSE" x="15.24" y="5.08" length="short" direction="in" rot="R180"/>
 <pin name="-VSENSE" x="15.24" y="-2.54" length="short" direction="in" rot="R180"/>
 <pin name="AVDD" x="15.24" y="-15.24" length="short" direction="pwr" rot="R180"/>
-<pin name="EPAD" x="-15.24" y="-17.78" length="short" direction="pas"/>
+<pin name="EPAD" x="15.24" y="-20.32" length="short" direction="pas" rot="R180"/>
 <wire x1="-12.7" y1="22.86" x2="-12.7" y2="-22.86" width="0.4064" layer="94"/>
 <wire x1="-12.7" y1="-22.86" x2="12.7" y2="-22.86" width="0.4064" layer="94"/>
 <wire x1="12.7" y1="-22.86" x2="12.7" y2="22.86" width="0.4064" layer="94"/>
@@ -15858,7 +15858,7 @@ Isolated power supply, LDOs</text>
 <wire x1="116.84" y1="63.5" x2="127" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$27" class="0">
+<net name="+VSENSE2" class="0">
 <segment>
 <pinref part="IC11" gate="A" pin="+VSENSE"/>
 <wire x1="152.4" y1="66.04" x2="116.84" y2="66.04" width="0.1524" layer="91"/>
@@ -15964,7 +15964,8 @@ Isolated power supply, LDOs</text>
 <net name="-12V_ISO" class="0">
 <segment>
 <pinref part="IC11" gate="A" pin="AVSS"/>
-<wire x1="116.84" y1="43.18" x2="124.46" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="43.18" x2="119.38" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="43.18" x2="124.46" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="124.46" y1="43.18" x2="124.46" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="C56" gate="G$1" pin="1"/>
 <pinref part="C59" gate="G$1" pin="2"/>
@@ -15973,6 +15974,10 @@ Isolated power supply, LDOs</text>
 <wire x1="124.46" y1="25.4" x2="124.46" y2="20.32" width="0.1524" layer="91"/>
 <junction x="124.46" y="25.4"/>
 <pinref part="U$4" gate="G$1" pin="-12V_ISO"/>
+<pinref part="IC11" gate="A" pin="EPAD"/>
+<wire x1="116.84" y1="40.64" x2="119.38" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="40.64" x2="119.38" y2="43.18" width="0.1524" layer="91"/>
+<junction x="119.38" y="43.18"/>
 </segment>
 <segment>
 <pinref part="C58" gate="G$1" pin="1"/>
@@ -15984,7 +15989,8 @@ Isolated power supply, LDOs</text>
 </segment>
 <segment>
 <pinref part="IC10" gate="A" pin="AVSS"/>
-<wire x1="116.84" y1="121.92" x2="124.46" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="121.92" x2="119.38" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="121.92" x2="124.46" y2="121.92" width="0.1524" layer="91"/>
 <wire x1="124.46" y1="121.92" x2="124.46" y2="109.22" width="0.1524" layer="91"/>
 <pinref part="C46" gate="G$1" pin="1"/>
 <pinref part="C48" gate="G$1" pin="2"/>
@@ -15993,6 +15999,10 @@ Isolated power supply, LDOs</text>
 <wire x1="124.46" y1="104.14" x2="124.46" y2="99.06" width="0.1524" layer="91"/>
 <junction x="124.46" y="104.14"/>
 <pinref part="U$11" gate="G$1" pin="-12V_ISO"/>
+<pinref part="IC10" gate="A" pin="EPAD"/>
+<wire x1="116.84" y1="119.38" x2="119.38" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="119.38" x2="119.38" y2="121.92" width="0.1524" layer="91"/>
+<junction x="119.38" y="121.92"/>
 </segment>
 <segment>
 <pinref part="D1" gate="G$1" pin="A1"/>
@@ -16059,7 +16069,7 @@ Isolated power supply, LDOs</text>
 <wire x1="137.16" y1="134.62" x2="137.16" y2="132.08" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$64" class="0">
+<net name="-VSENSE2" class="0">
 <segment>
 <pinref part="IC11" gate="A" pin="-VSENSE"/>
 <wire x1="116.84" y1="58.42" x2="149.86" y2="58.42" width="0.1524" layer="91"/>
@@ -16111,7 +16121,7 @@ Isolated power supply, LDOs</text>
 <wire x1="116.84" y1="142.24" x2="127" y2="142.24" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$63" class="0">
+<net name="+VSENSE1" class="0">
 <segment>
 <pinref part="IC10" gate="A" pin="+VSENSE"/>
 <wire x1="152.4" y1="144.78" x2="116.84" y2="144.78" width="0.1524" layer="91"/>
@@ -16190,7 +16200,7 @@ Isolated power supply, LDOs</text>
 <label x="53.34" y="61.595" size="1.27" layer="102"/>
 </segment>
 </net>
-<net name="N$79" class="0">
+<net name="-VSENSE1" class="0">
 <segment>
 <pinref part="IC10" gate="A" pin="-VSENSE"/>
 <wire x1="116.84" y1="137.16" x2="149.86" y2="137.16" width="0.1524" layer="91"/>
@@ -16276,14 +16286,10 @@ Isolated power supply, LDOs</text>
 <pinref part="SUPPLY25" gate="GND" pin="GND"/>
 </segment>
 <segment>
-<pinref part="IC11" gate="A" pin="EPAD"/>
-<wire x1="86.36" y1="43.18" x2="81.28" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="81.28" y1="43.18" x2="81.28" y2="40.64" width="0.1524" layer="91"/>
 <pinref part="IC11" gate="A" pin="GND"/>
 <wire x1="81.28" y1="40.64" x2="81.28" y2="38.1" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="45.72" x2="81.28" y2="45.72" width="0.1524" layer="91"/>
-<wire x1="81.28" y1="45.72" x2="81.28" y2="43.18" width="0.1524" layer="91"/>
-<junction x="81.28" y="43.18"/>
+<wire x1="81.28" y1="45.72" x2="81.28" y2="40.64" width="0.1524" layer="91"/>
 <pinref part="IC11" gate="A" pin="DVDD-EN"/>
 <wire x1="86.36" y1="50.8" x2="81.28" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="81.28" y1="50.8" x2="81.28" y2="45.72" width="0.1524" layer="91"/>
@@ -16367,14 +16373,10 @@ Isolated power supply, LDOs</text>
 <junction x="129.54" y="40.64"/>
 </segment>
 <segment>
-<pinref part="IC10" gate="A" pin="EPAD"/>
-<wire x1="86.36" y1="121.92" x2="81.28" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="81.28" y1="121.92" x2="81.28" y2="119.38" width="0.1524" layer="91"/>
 <pinref part="IC10" gate="A" pin="GND"/>
 <wire x1="81.28" y1="119.38" x2="81.28" y2="116.84" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="124.46" x2="81.28" y2="124.46" width="0.1524" layer="91"/>
-<wire x1="81.28" y1="124.46" x2="81.28" y2="121.92" width="0.1524" layer="91"/>
-<junction x="81.28" y="121.92"/>
+<wire x1="81.28" y1="124.46" x2="81.28" y2="119.38" width="0.1524" layer="91"/>
 <pinref part="IC10" gate="A" pin="DVDD-EN"/>
 <wire x1="86.36" y1="129.54" x2="81.28" y2="129.54" width="0.1524" layer="91"/>
 <wire x1="81.28" y1="129.54" x2="81.28" y2="124.46" width="0.1524" layer="91"/>
