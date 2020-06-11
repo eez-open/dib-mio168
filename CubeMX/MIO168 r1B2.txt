@@ -1,6 +1,6 @@
 Configuration	MIO168 r1B2
 STM32CubeMX 	5.6.1
-Date	05/05/2020
+Date	06/11/2020
 MCU	STM32F446ZCTx
 
 
@@ -17,9 +17,13 @@ SDIO	SD 4 bits Wide bus	SDIO_D3	PC11
 SPI1	Full-Duplex Slave	SPI1_MISO	PA6
 SPI1	Full-Duplex Slave	SPI1_MOSI	PA7
 SPI1	Full-Duplex Slave	SPI1_SCK	PA5
-SPI4	Full-Duplex Master	SPI4_MISO	PE13
-SPI4	Full-Duplex Master	SPI4_MOSI	PE14
-SPI4	Full-Duplex Master	SPI4_SCK	PE12
+SPI2	Full-Duplex Master	SPI2_MISO	PB14
+SPI2	Full-Duplex Master	SPI2_MOSI	PB15
+SPI2	Full-Duplex Master	SPI2_SCK	PB13
+SPI2	Hardware NSS Output Signal	SPI2_NSS	PB12
+SPI4	Full-Duplex Slave	SPI4_MISO	PE13
+SPI4	Full-Duplex Slave	SPI4_MOSI	PE14
+SPI4	Full-Duplex Slave	SPI4_SCK	PE12
 SPI4	Hardware NSS Input Signal	SPI4_NSS	PE11
 SYS	Serial Wire	SYS_JTCK-SWCLK	PA14
 SYS	Serial Wire	SYS_JTMS-SWDIO	PA13
@@ -34,7 +38,6 @@ TIM4	PWM Generation CH2	TIM4_CH2	PD13
 
 
 Pin Nb	PINs	FUNCTIONs	LABELs
-2	PE3	GPIO_Input	ADC_IRQ
 7	PC13	GPIO_Output	TEMP_SW#1
 8	PC14-OSC32_IN	GPIO_Output	TEMP_SW#2
 9	PC15-OSC32_OUT	GPIO_Input	DAC_ALARM
@@ -60,12 +63,17 @@ Pin Nb	PINs	FUNCTIONs	LABELs
 45	PC5	GPIO_Output	DOUT5
 46	PB0	GPIO_Output	DOUT6
 47	PB1	GPIO_Output	DOUT7
-64	PE11	SPI4_NSS	
-65	PE12	SPI4_SCK	
-66	PE13	SPI4_MISO	
-67	PE14	SPI4_MOSI	
+64	PE11	SPI4_NSS	DIB_NSS
+65	PE12	SPI4_SCK	DIB_SCLK
+66	PE13	SPI4_MISO	DIB_MISO
+67	PE14	SPI4_MOSI	DIB_MOSI
 69	PB10	GPIO_Output	DIB_IRQ
 70	PB11	GPIO_Output	OUT_EN
+73	PB12	SPI2_NSS	ADC_CS
+74	PB13	SPI2_SCK	ADC_SCLK
+75	PB14	SPI2_MISO	ADC_MISO
+76	PB15	SPI2_MOSI	ADC_MOSI
+77	PD8	GPIO_Output	ADC_IRQ
 80	PD11	GPIO_Input	DIB_SYNC
 81	PD12	TIM4_CH1	PWM1
 82	PD13	TIM4_CH2	PWM2
@@ -115,9 +123,13 @@ SDIO	SD 4 bits Wide bus	SDIO_D3	PC11
 SPI1	Full-Duplex Slave	SPI1_MISO	PA6
 SPI1	Full-Duplex Slave	SPI1_MOSI	PA7
 SPI1	Full-Duplex Slave	SPI1_SCK	PA5
-SPI4	Full-Duplex Master	SPI4_MISO	PE13
-SPI4	Full-Duplex Master	SPI4_MOSI	PE14
-SPI4	Full-Duplex Master	SPI4_SCK	PE12
+SPI2	Full-Duplex Master	SPI2_MISO	PB14
+SPI2	Full-Duplex Master	SPI2_MOSI	PB15
+SPI2	Full-Duplex Master	SPI2_SCK	PB13
+SPI2	Hardware NSS Output Signal	SPI2_NSS	PB12
+SPI4	Full-Duplex Slave	SPI4_MISO	PE13
+SPI4	Full-Duplex Slave	SPI4_MOSI	PE14
+SPI4	Full-Duplex Slave	SPI4_SCK	PE12
 SPI4	Hardware NSS Input Signal	SPI4_NSS	PE11
 SYS	Serial Wire	SYS_JTCK-SWCLK	PA14
 SYS	Serial Wire	SYS_JTMS-SWDIO	PA13
@@ -132,7 +144,6 @@ TIM4	PWM Generation CH2	TIM4_CH2	PD13
 
 
 Pin Nb	PINs	FUNCTIONs	LABELs
-2	PE3	GPIO_Input	ADC_IRQ
 7	PC13	GPIO_Output	TEMP_SW#1
 8	PC14-OSC32_IN	GPIO_Output	TEMP_SW#2
 9	PC15-OSC32_OUT	GPIO_Input	DAC_ALARM
@@ -158,12 +169,17 @@ Pin Nb	PINs	FUNCTIONs	LABELs
 45	PC5	GPIO_Output	DOUT5
 46	PB0	GPIO_Output	DOUT6
 47	PB1	GPIO_Output	DOUT7
-64	PE11	SPI4_NSS	
-65	PE12	SPI4_SCK	
-66	PE13	SPI4_MISO	
-67	PE14	SPI4_MOSI	
+64	PE11	SPI4_NSS	DIB_NSS
+65	PE12	SPI4_SCK	DIB_SCLK
+66	PE13	SPI4_MISO	DIB_MISO
+67	PE14	SPI4_MOSI	DIB_MOSI
 69	PB10	GPIO_Output	DIB_IRQ
 70	PB11	GPIO_Output	OUT_EN
+73	PB12	SPI2_NSS	ADC_CS
+74	PB13	SPI2_SCK	ADC_SCLK
+75	PB14	SPI2_MISO	ADC_MISO
+76	PB15	SPI2_MOSI	ADC_MOSI
+77	PD8	GPIO_Output	ADC_IRQ
 80	PD11	GPIO_Input	DIB_SYNC
 81	PD12	TIM4_CH1	PWM1
 82	PD13	TIM4_CH2	PWM2
@@ -209,12 +225,12 @@ SOFTWARE PROJECT
 Project Settings : 
 Project Name : MIO168 r1B2
 Project Folder : /home/denis/BACKUP/EEZ/Digital control/MCU/STM32/Projects/MIO168 r1B2
-Toolchain / IDE : EWARM V8.32
+Toolchain / IDE : STM32CubeIDE
 Firmware Package Name and Version : STM32Cube FW_F4 V1.25.0
 
 
 Code Generation Settings : 
-STM32Cube MCU packages and embedded software packs : Copy all used libraries into the project folder
+STM32Cube MCU packages and embedded software packs : Copy only the necessary library files
 Generate peripheral initialization as a pair of '.c/.h' files per peripheral : No
 Backup previously generated files when re-generating : No
 Delete previously generated files when not re-generated : Yes
