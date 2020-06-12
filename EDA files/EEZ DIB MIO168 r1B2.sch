@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.025" unitdist="inch" unit="inch" style="lines" multiple="4" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -89,6 +89,7 @@
 <layer number="110" name="110" color="7" fill="1" visible="no" active="no"/>
 <layer number="111" name="111" color="7" fill="1" visible="no" active="no"/>
 <layer number="112" name="tSilk" color="7" fill="1" visible="no" active="no"/>
+<layer number="113" name="ReferenceLS" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="114" name="EEZ" color="12" fill="1" visible="yes" active="yes"/>
 <layer number="116" name="Patch_BOT" color="7" fill="1" visible="no" active="no"/>
 <layer number="118" name="Rect_Pads" color="7" fill="1" visible="no" active="no"/>
@@ -3015,6 +3016,22 @@ Buerklin: &lt;b&gt;05 F 142&lt;/b&gt;</description>
 <text x="-2.2225" y="1.5875" size="1.016" layer="25" ratio="10">&gt;NAME</text>
 <text x="-2.2225" y="-2.54" size="1.016" layer="27" ratio="10">&gt;VALUE</text>
 </package>
+<package name="JP3-0805-CUT2">
+<smd name="NO" x="-1.9" y="0" dx="1.3" dy="1.5" layer="1"/>
+<smd name="COM" x="0" y="0" dx="1.3" dy="1.5" layer="1"/>
+<wire x1="-2.923" y1="0.983" x2="2.923" y2="0.983" width="0.127" layer="39"/>
+<wire x1="2.923" y1="0.983" x2="2.923" y2="-0.983" width="0.127" layer="39"/>
+<wire x1="2.923" y1="-0.983" x2="-2.923" y2="-0.983" width="0.127" layer="39"/>
+<wire x1="-2.923" y1="-0.983" x2="-2.923" y2="0.983" width="0.127" layer="39"/>
+<text x="-2.982" y="1.143" size="1.016" layer="25" ratio="10">&gt;NAME</text>
+<polygon width="0.0254" layer="1">
+<vertex x="0.5105" y="0.254"/>
+<vertex x="1.3995" y="0.254"/>
+<vertex x="1.3995" y="-0.254"/>
+<vertex x="0.5105" y="-0.254"/>
+</polygon>
+<smd name="NC" x="1.9" y="0" dx="1.3" dy="1.5" layer="1"/>
+</package>
 </packages>
 <symbols>
 <symbol name="L_POINT_V">
@@ -4965,6 +4982,16 @@ Farnell: &lt;b&gt;2423288&lt;/b&gt;</description>
 </technologies>
 </device>
 <device name="-ROTATED" package="JP3-CUT2">
+<connects>
+<connect gate="G$1" pin="COM" pad="COM"/>
+<connect gate="G$1" pin="NC" pad="NC"/>
+<connect gate="G$1" pin="NO" pad="NO"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="-0805-ROTATED" package="JP3-0805-CUT2">
 <connects>
 <connect gate="G$1" pin="COM" pad="COM"/>
 <connect gate="G$1" pin="NC" pad="NC"/>
@@ -12899,6 +12926,7 @@ Source: Samtec SSW.pdf</description>
 <part name="R81" library="rcl" deviceset="R-EU_" device="R1206" value="560K"/>
 <part name="GND" library="EEZ_Lib1" deviceset="PCB_TEST_TAB" device="SHIELD"/>
 <part name="SUPPLY27" library="supply2" deviceset="GND" device=""/>
+<part name="DIB1.1" library="EEZ_Lib1" deviceset="JP3-CUT" device="-0805-ROTATED"/>
 </parts>
 <sheets>
 <sheet>
@@ -13249,7 +13277,7 @@ Isolated power supply, LDOs</text>
 <attribute name="VALUE" x="248.539" y="162.179" size="1.778" layer="96" rot="MR180"/>
 </instance>
 <instance part="SUPPLY57" gate="GND" x="251.46" y="157.48" smashed="yes">
-<attribute name="VALUE" x="249.555" y="156.845" size="1.778" layer="96" rot="MR0"/>
+<attribute name="VALUE" x="253.365" y="158.115" size="1.778" layer="96" rot="MR180"/>
 </instance>
 <instance part="GND13" gate="G$1" x="182.88" y="157.48" smashed="yes">
 <attribute name="VALUE" x="179.07" y="154.94" size="1.778" layer="96"/>
@@ -13281,14 +13309,14 @@ Isolated power supply, LDOs</text>
 <attribute name="VALUE" x="185.801" y="119.761" size="1.778" layer="96" rot="MR0"/>
 </instance>
 <instance part="GND9" gate="G$1" x="182.88" y="116.84" smashed="yes">
-<attribute name="VALUE" x="179.07" y="114.3" size="1.778" layer="96"/>
+<attribute name="VALUE" x="172.085" y="115.57" size="1.778" layer="96"/>
 </instance>
 <instance part="C5" gate="G$1" x="246.38" y="121.92" smashed="yes" rot="MR90">
 <attribute name="NAME" x="245.999" y="124.079" size="1.778" layer="95" rot="MR180"/>
 <attribute name="VALUE" x="245.999" y="121.539" size="1.778" layer="96" rot="MR180"/>
 </instance>
 <instance part="SUPPLY56" gate="GND" x="248.92" y="116.84" smashed="yes">
-<attribute name="VALUE" x="247.015" y="116.205" size="1.778" layer="96" rot="MR0"/>
+<attribute name="VALUE" x="250.825" y="117.475" size="1.778" layer="96" rot="MR180"/>
 </instance>
 <instance part="GND10" gate="G$1" x="193.04" y="91.44" smashed="yes">
 <attribute name="VALUE" x="189.23" y="88.9" size="1.778" layer="96"/>
@@ -13324,14 +13352,22 @@ Isolated power supply, LDOs</text>
 <attribute name="VALUE" x="160.02" y="60.96" size="1.778" layer="96"/>
 </instance>
 <instance part="RN1" gate="-4" x="248.92" y="149.86" smashed="yes">
-<attribute name="NAME" x="243.84" y="146.812" size="1.778" layer="95"/>
+<attribute name="NAME" x="251.46" y="149.987" size="1.27" layer="95"/>
 </instance>
 <instance part="RN1" gate="-1" x="248.92" y="144.78" smashed="yes">
-<attribute name="VALUE" x="251.46" y="141.732" size="1.778" layer="96"/>
-<attribute name="NAME" x="243.84" y="141.732" size="1.778" layer="95"/>
+<attribute name="VALUE" x="246.38" y="139.192" size="1.27" layer="96"/>
+<attribute name="NAME" x="251.46" y="144.907" size="1.27" layer="95"/>
 </instance>
-<instance part="RN1" gate="-3" x="248.92" y="142.24"/>
-<instance part="RN1" gate="-2" x="248.92" y="147.32"/>
+<instance part="RN1" gate="-3" x="248.92" y="142.24" smashed="yes">
+<attribute name="NAME" x="251.46" y="142.367" size="1.27" layer="95"/>
+</instance>
+<instance part="RN1" gate="-2" x="248.92" y="147.32" smashed="yes">
+<attribute name="NAME" x="251.46" y="147.447" size="1.27" layer="95"/>
+</instance>
+<instance part="DIB1.1" gate="G$1" x="180.34" y="104.14" smashed="yes" rot="MR180">
+<attribute name="NAME" x="179.07" y="104.775" size="1.778" layer="95" rot="R180"/>
+</instance>
+<instance part="X1" gate="-12" x="66.04" y="144.78"/>
 </instances>
 <busses>
 </busses>
@@ -13534,9 +13570,10 @@ Isolated power supply, LDOs</text>
 <label x="81.28" y="147.955" size="1.27" layer="102" rot="MR0"/>
 </segment>
 <segment>
-<wire x1="182.88" y1="104.14" x2="195.58" y2="104.14" width="0.1524" layer="91"/>
-<label x="182.88" y="104.775" size="1.27" layer="102"/>
-<pinref part="IC3" gate="A" pin="A4"/>
+<label x="167.64" y="109.855" size="1.27" layer="102"/>
+<pinref part="DIB1.1" gate="G$1" pin="NC"/>
+<wire x1="167.64" y1="109.22" x2="180.34" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="180.34" y1="109.22" x2="180.34" y2="106.68" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$69" class="0">
@@ -14139,6 +14176,26 @@ Isolated power supply, LDOs</text>
 <pinref part="IC2" gate="A" pin="B4"/>
 <wire x1="243.84" y1="142.24" x2="236.22" y2="142.24" width="0.1524" layer="91"/>
 <pinref part="RN1" gate="-3" pin="1"/>
+</segment>
+</net>
+<net name="DIB_CSB" class="0">
+<segment>
+<pinref part="DIB1.1" gate="G$1" pin="NO"/>
+<wire x1="180.34" y1="101.6" x2="180.34" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="180.34" y1="99.06" x2="167.64" y2="99.06" width="0.1524" layer="91"/>
+<label x="167.64" y="99.695" size="1.27" layer="102"/>
+</segment>
+<segment>
+<pinref part="X1" gate="-12" pin="1"/>
+<wire x1="66.04" y1="144.78" x2="81.28" y2="144.78" width="0.1524" layer="91"/>
+<label x="81.28" y="145.415" size="1.27" layer="102" rot="MR0"/>
+</segment>
+</net>
+<net name="N$11" class="0">
+<segment>
+<pinref part="DIB1.1" gate="G$1" pin="COM"/>
+<pinref part="IC3" gate="A" pin="A4"/>
+<wire x1="182.88" y1="104.14" x2="195.58" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
