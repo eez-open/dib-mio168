@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.025" unitdist="inch" unit="inch" style="lines" multiple="4" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -16028,18 +16028,18 @@ Isolated power supply, LDOs</text>
 </net>
 <net name="DOUT0" class="0">
 <segment>
-<wire x1="10.16" y1="142.24" x2="12.7" y2="139.7" width="0.1524" layer="91"/>
-<pinref part="IC8" gate="A" pin="PA8"/>
-<label x="41.275" y="140.335" size="1.27" layer="102" rot="MR0"/>
-<wire x1="12.7" y1="139.7" x2="43.18" y2="139.7" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="DOUT1" class="0">
-<segment>
 <pinref part="IC8" gate="A" pin="PA2"/>
 <wire x1="43.18" y1="154.94" x2="12.7" y2="154.94" width="0.1524" layer="91"/>
 <label x="41.91" y="155.575" size="1.27" layer="102" rot="MR0"/>
 <wire x1="10.16" y1="157.48" x2="12.7" y2="154.94" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="DOUT1" class="0">
+<segment>
+<wire x1="10.16" y1="139.7" x2="12.7" y2="137.16" width="0.1524" layer="91"/>
+<pinref part="IC8" gate="A" pin="PA9"/>
+<wire x1="12.7" y1="137.16" x2="43.18" y2="137.16" width="0.1524" layer="91"/>
+<label x="41.275" y="137.795" size="1.27" layer="102" rot="MR0"/>
 </segment>
 </net>
 <net name="IRQ" class="0">
