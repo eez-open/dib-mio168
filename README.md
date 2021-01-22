@@ -1,16 +1,17 @@
-The [EEZ DIB](https://github.com/eez-open/modular-psu) MIO168 module features multiple digital and analog I/O.
+The [EEZ DIB](https://github.com/eez-open/modular-psu) MIO168 module features multiple digital I/O, analog outputs and expansion connectors for carry various AFEs.
 
 ### Feature list
 
-* 2 x 16-pin dual row 3.81 mm I/O connectors
+* On-board [STM32F446ZCT6](https://www.st.com/content/st_com/en/products/microcontrollers-microprocessors/stm32-32-bit-arm-cortex-mcus/stm32-high-performance-mcus/stm32f4-series/stm32f446/stm32f446zc.html) high-performance foundation line MCU, ARM Cortex-M4 with DSP and FPU, 256 KiB Flash, LQFP-144 package 
+* 1 x 8-pin single row 3.81 mm connector (digital inputs)
+* 1 x 16-pin dual row 3.81 mm I/O connector (digital and analog outputs)
+* 2 x 10-pin ADIB 2.0 mm connectors
 * 8 x protected digital inputs (3.3/5/24 V), 2 x fast/slow, 6 x slow
 * 8 x digital outputs (low-side) with multiple protections and FAULT detection, 550 mA per channel (current limit 1 A)
-* 2 x PWM outputs, protected
-* 4 x analog bipolar inputs with protection. Voltage or current selection per channel. 14-bit ADC, replaceable with pin compatible 12- or 16-bit version. Switchable bias for NTC sensors on first two channels
+* 2 x PWM outputs (protected) or sensor bias power (+/-15 V, max. 10 mA)
 * 2 x analog bipolar outputs (+/-5 V, +/-10 V, 0-5 V, 0-10 V). Voltage or current output with protection. 12-bit DAC, replaceable with pin compatible 14- or 16-bit version
 * 2 x analog bipolar outputs +/-10 V. 12-bit DAC, replaceable with pin compatible 14- or 16-bit version
-* On-board isolated +/-15 V (2W) power supply with +/-12 V, +5 V and +3.3 V LDOs
-* STM32F446 MCU
+* On-board isolated power supply with +/-5.3 V outputs (with 4x multipliers), +/-15 V and +3.3 V LDO
 * Firmware download via SPI
 * Optional SWD for debugging
 * Optional Micro SD card
