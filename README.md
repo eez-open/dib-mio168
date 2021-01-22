@@ -17,6 +17,6 @@ The [EEZ DIB](https://github.com/eez-open/modular-psu) MIO168 module features mu
 * I2C EEPROM for storing board specific parameters
 * Dimensions: 146 x 95 mm, 4-layer PCB
 
-### r1B2 prototype
+### r2B2 prototype (without AFE installed)
 
-![prototype](Images/MIO168_prototype_r1B2.JPG)
+![prototype](Images/MIO168_prototype_r2B2.JPG)
