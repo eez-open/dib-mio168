@@ -15913,9 +15913,10 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <part name="D24" library="EEZ_Lib1" deviceset="DIODE" device="SOD323R" value="BAS316"/>
 <part name="D25" library="EEZ_Lib1" deviceset="DIODE" device="SOD323R" value="BAS316"/>
 <part name="D26" library="EEZ_Lib1" deviceset="DIODE" device="SOD323R" value="BAS316"/>
-<part name="IC9" library="EEZ_DIB" deviceset="XTSD0XG" device=""/>
+<part name="IC9" library="EEZ_DIB" deviceset="XTSD0XG" device="" value="N.C."/>
 <part name="SUPPLY70" library="supply2" deviceset="GND" device=""/>
 <part name="+3V3_ISO13" library="EEZ_DIB" deviceset="+3V3_ISO" device=""/>
+<part name="SUPPLY73" library="supply2" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -17316,10 +17317,10 @@ Isolated power supply, LDOs</text>
 <text x="2.54" y="4.445" size="1.27" layer="94">More info at http://www.envox.hr/eez</text>
 <text x="164.465" y="26.67" size="2.54" layer="94" font="vector">MCU, optional SDcard</text>
 <text x="125.095" y="61.595" size="1.27" layer="103">Tant.</text>
-<wire x1="256.54" y1="116.84" x2="187.96" y2="116.84" width="0.1524" layer="97" style="shortdash"/>
-<text x="190.5" y="177.8" size="1.778" layer="97" rot="MR180">Micro SD card (optional)</text>
-<wire x1="187.96" y1="177.8" x2="187.96" y2="116.84" width="0.1524" layer="97" style="shortdash"/>
-<rectangle x1="195.58" y1="119.38" x2="256.54" y2="175.26" layer="97"/>
+<wire x1="259.08" y1="73.66" x2="190.5" y2="73.66" width="0.1524" layer="97" style="shortdash"/>
+<text x="193.04" y="177.8" size="1.778" layer="97" rot="MR180">Micro SD card (optional)</text>
+<wire x1="190.5" y1="177.8" x2="190.5" y2="73.66" width="0.1524" layer="97" style="shortdash"/>
+<rectangle x1="198.12" y1="119.38" x2="259.08" y2="175.26" layer="97"/>
 <text x="10.16" y="60.96" size="1.4224" layer="101">SPI1</text>
 <text x="17.78" y="60.96" size="1.4224" layer="101">AUX (shared with PWM#1, PWM#2, DIN7)</text>
 <text x="10.16" y="58.42" size="1.4224" layer="101">SPI2</text>
@@ -17328,6 +17329,10 @@ Isolated power supply, LDOs</text>
 <text x="17.78" y="58.42" size="1.4224" layer="101">DACs</text>
 <text x="17.78" y="55.88" size="1.4224" layer="101">ADC</text>
 <text x="17.78" y="53.34" size="1.4224" layer="101">DIB interface</text>
+<rectangle x1="228.6" y1="78.74" x2="254" y2="111.76" layer="97"/>
+<text x="89.535" y="94.615" size="1.27" layer="103">PCB_ID0</text>
+<text x="89.535" y="92.075" size="1.27" layer="103">PCB_ID1</text>
+<text x="99.695" y="94.615" size="1.27" layer="103">PCB_ID0=0</text>
 </plain>
 <instances>
 <instance part="FRAME2" gate="G$1" x="0" y="0" smashed="yes"/>
@@ -17458,32 +17463,32 @@ Isolated power supply, LDOs</text>
 <attribute name="NAME" x="120.523" y="67.4624" size="1.778" layer="95" rot="MR180"/>
 <attribute name="VALUE" x="124.968" y="65.5574" size="1.778" layer="96" rot="MR180"/>
 </instance>
-<instance part="SUPPLY13" gate="GND" x="254" y="147.32" smashed="yes">
-<attribute name="VALUE" x="255.905" y="145.415" size="1.778" layer="96" rot="R180"/>
+<instance part="SUPPLY13" gate="GND" x="256.54" y="147.32" smashed="yes">
+<attribute name="VALUE" x="258.445" y="145.415" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="SUPPLY16" gate="GND" x="254" y="124.46" smashed="yes">
-<attribute name="VALUE" x="255.905" y="122.555" size="1.778" layer="96" rot="R180"/>
+<instance part="SUPPLY16" gate="GND" x="256.54" y="124.46" smashed="yes">
+<attribute name="VALUE" x="258.445" y="122.555" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="J2" gate="G$1" x="238.76" y="142.24" smashed="yes">
-<attribute name="NAME" x="228.6" y="158.115" size="1.778" layer="95"/>
-<attribute name="VALUE" x="228.6" y="124.46" size="1.778" layer="96"/>
+<instance part="J2" gate="G$1" x="241.3" y="142.24" smashed="yes">
+<attribute name="NAME" x="231.14" y="158.115" size="1.778" layer="95"/>
+<attribute name="VALUE" x="231.14" y="124.46" size="1.778" layer="96"/>
 </instance>
-<instance part="C24" gate="G$1" x="228.6" y="165.1" smashed="yes" rot="MR270">
-<attribute name="NAME" x="231.013" y="165.5826" size="1.778" layer="95"/>
-<attribute name="VALUE" x="231.013" y="163.0426" size="1.778" layer="96"/>
+<instance part="C24" gate="G$1" x="231.14" y="165.1" smashed="yes" rot="MR270">
+<attribute name="NAME" x="233.553" y="165.5826" size="1.778" layer="95"/>
+<attribute name="VALUE" x="233.553" y="163.0426" size="1.778" layer="96"/>
 </instance>
-<instance part="SUPPLY12" gate="GND" x="236.22" y="162.56" smashed="yes" rot="MR0">
-<attribute name="VALUE" x="234.315" y="160.655" size="1.778" layer="96" rot="MR180"/>
+<instance part="SUPPLY12" gate="GND" x="238.76" y="162.56" smashed="yes" rot="MR0">
+<attribute name="VALUE" x="236.855" y="160.655" size="1.778" layer="96" rot="MR180"/>
 </instance>
-<instance part="R3" gate="G$1" x="218.44" y="162.56" smashed="yes" rot="R270">
-<attribute name="NAME" x="219.71" y="162.7886" size="1.778" layer="95"/>
-<attribute name="VALUE" x="219.71" y="160.528" size="1.778" layer="96"/>
+<instance part="R3" gate="G$1" x="220.98" y="162.56" smashed="yes" rot="R270">
+<attribute name="NAME" x="222.25" y="162.7886" size="1.778" layer="95"/>
+<attribute name="VALUE" x="222.25" y="160.528" size="1.778" layer="96"/>
 </instance>
-<instance part="SUPPLY15" gate="GND" x="223.52" y="124.46" smashed="yes">
-<attribute name="VALUE" x="221.615" y="125.095" size="1.778" layer="96" rot="R180"/>
+<instance part="SUPPLY15" gate="GND" x="226.06" y="124.46" smashed="yes">
+<attribute name="VALUE" x="224.155" y="125.095" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="+3V3_ISO3" gate="G$1" x="223.52" y="172.72" smashed="yes" rot="MR0">
-<attribute name="VALUE" x="220.345" y="177.8" size="1.778" layer="96" rot="MR180"/>
+<instance part="+3V3_ISO3" gate="G$1" x="226.06" y="172.72" smashed="yes" rot="MR0">
+<attribute name="VALUE" x="222.885" y="177.8" size="1.778" layer="96" rot="MR180"/>
 </instance>
 <instance part="RN5" gate="-2" x="25.4" y="109.22" smashed="yes">
 <attribute name="NAME" x="28.575" y="109.347" size="1.27" layer="95"/>
@@ -17526,19 +17531,22 @@ Isolated power supply, LDOs</text>
 <attribute name="NAME" x="167.005" y="115.189" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="169.545" y="111.125" size="1.27" layer="96" rot="R180"/>
 </instance>
-<instance part="RN4" gate="-2" x="208.28" y="162.56" rot="R270"/>
-<instance part="RN4" gate="-3" x="203.2" y="162.56" rot="R270"/>
-<instance part="RN4" gate="-4" x="198.12" y="162.56" rot="R270"/>
-<instance part="RN4" gate="-1" x="213.36" y="162.56" smashed="yes" rot="R270">
-<attribute name="VALUE" x="211.963" y="156.845" size="1.27" layer="96" rot="R90"/>
-<attribute name="NAME" x="210.058" y="160.655" size="1.27" layer="95" rot="R90"/>
+<instance part="RN4" gate="-2" x="210.82" y="162.56" rot="R270"/>
+<instance part="RN4" gate="-3" x="205.74" y="162.56" rot="R270"/>
+<instance part="RN4" gate="-4" x="200.66" y="162.56" rot="R270"/>
+<instance part="RN4" gate="-1" x="215.9" y="162.56" smashed="yes" rot="R270">
+<attribute name="VALUE" x="214.503" y="156.845" size="1.27" layer="96" rot="R90"/>
+<attribute name="NAME" x="212.598" y="160.655" size="1.27" layer="95" rot="R90"/>
 </instance>
-<instance part="IC9" gate="G$1" x="238.76" y="96.52"/>
-<instance part="SUPPLY70" gate="GND" x="223.52" y="78.74" smashed="yes">
-<attribute name="VALUE" x="221.615" y="79.375" size="1.778" layer="96" rot="R180"/>
+<instance part="IC9" gate="G$1" x="241.3" y="96.52"/>
+<instance part="SUPPLY70" gate="GND" x="226.06" y="78.74" smashed="yes">
+<attribute name="VALUE" x="224.155" y="79.375" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="+3V3_ISO13" gate="G$1" x="208.28" y="96.52" smashed="yes" rot="MR270">
-<attribute name="VALUE" x="205.105" y="95.885" size="1.778" layer="96" rot="MR0"/>
+<instance part="+3V3_ISO13" gate="G$1" x="210.82" y="96.52" smashed="yes" rot="MR270">
+<attribute name="VALUE" x="207.645" y="95.885" size="1.778" layer="96" rot="MR0"/>
+</instance>
+<instance part="SUPPLY73" gate="GND" x="101.6" y="86.36" smashed="yes">
+<attribute name="VALUE" x="99.06" y="84.455" size="1.778" layer="96" rot="MR180"/>
 </instance>
 </instances>
 <busses>
@@ -17687,25 +17695,25 @@ Isolated power supply, LDOs</text>
 </segment>
 <segment>
 <pinref part="SUPPLY13" gate="GND" pin="GND"/>
-<wire x1="254" y1="149.86" x2="254" y2="152.4" width="0.1524" layer="91"/>
-<wire x1="251.46" y1="152.4" x2="254" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="149.86" x2="256.54" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="254" y1="152.4" x2="256.54" y2="152.4" width="0.1524" layer="91"/>
 <pinref part="J2" gate="G$1" pin="SH"/>
 </segment>
 <segment>
-<wire x1="251.46" y1="129.54" x2="254" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="254" y1="129.54" x2="256.54" y2="129.54" width="0.1524" layer="91"/>
 <pinref part="SUPPLY16" gate="GND" pin="GND"/>
-<wire x1="254" y1="129.54" x2="254" y2="127" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="129.54" x2="256.54" y2="127" width="0.1524" layer="91"/>
 <pinref part="J2" gate="G$1" pin="SW2"/>
 </segment>
 <segment>
 <pinref part="SUPPLY12" gate="GND" pin="GND"/>
 <pinref part="C24" gate="G$1" pin="2"/>
-<wire x1="233.68" y1="165.1" x2="236.22" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="236.22" y1="165.1" x2="238.76" y2="165.1" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<wire x1="226.06" y1="139.7" x2="223.52" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="228.6" y1="139.7" x2="226.06" y2="139.7" width="0.1524" layer="91"/>
 <pinref part="SUPPLY15" gate="GND" pin="GND"/>
-<wire x1="223.52" y1="139.7" x2="223.52" y2="127" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="139.7" x2="226.06" y2="127" width="0.1524" layer="91"/>
 <pinref part="J2" gate="G$1" pin="VSS"/>
 </segment>
 <segment>
@@ -17730,9 +17738,19 @@ Isolated power supply, LDOs</text>
 </segment>
 <segment>
 <pinref part="IC9" gate="G$1" pin="VSS"/>
-<wire x1="226.06" y1="91.44" x2="223.52" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="228.6" y1="91.44" x2="226.06" y2="91.44" width="0.1524" layer="91"/>
 <pinref part="SUPPLY70" gate="GND" pin="GND"/>
-<wire x1="223.52" y1="91.44" x2="223.52" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="91.44" x2="226.06" y2="81.28" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="IC8" gate="A" pin="PD9"/>
+<wire x1="83.82" y1="93.98" x2="101.6" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="93.98" x2="101.6" y2="91.44" width="0.1524" layer="91"/>
+<pinref part="IC8" gate="A" pin="PD10"/>
+<wire x1="101.6" y1="91.44" x2="101.6" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="91.44" x2="101.6" y2="91.44" width="0.1524" layer="91"/>
+<junction x="101.6" y="91.44"/>
+<pinref part="SUPPLY73" gate="GND" pin="GND"/>
 </segment>
 </net>
 <net name="SWDIO" class="0">
@@ -17779,38 +17797,38 @@ Isolated power supply, LDOs</text>
 <segment>
 <pinref part="+3V3_ISO13" gate="G$1" pin="+3V3_ISO"/>
 <pinref part="IC9" gate="G$1" pin="VDD"/>
-<wire x1="208.28" y1="96.52" x2="226.06" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="210.82" y1="96.52" x2="228.6" y2="96.52" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<wire x1="223.52" y1="165.1" x2="223.52" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="165.1" x2="226.06" y2="170.18" width="0.1524" layer="91"/>
 <pinref part="C24" gate="G$1" pin="1"/>
-<wire x1="223.52" y1="170.18" x2="223.52" y2="172.72" width="0.1524" layer="91"/>
-<wire x1="223.52" y1="165.1" x2="226.06" y2="165.1" width="0.1524" layer="91"/>
-<wire x1="203.2" y1="170.18" x2="198.12" y2="170.18" width="0.1524" layer="91"/>
-<wire x1="226.06" y1="144.78" x2="223.52" y2="144.78" width="0.1524" layer="91"/>
-<wire x1="223.52" y1="165.1" x2="223.52" y2="144.78" width="0.1524" layer="91"/>
-<junction x="223.52" y="165.1"/>
-<junction x="223.52" y="170.18"/>
+<wire x1="226.06" y1="170.18" x2="226.06" y2="172.72" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="165.1" x2="228.6" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="205.74" y1="170.18" x2="200.66" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="228.6" y1="144.78" x2="226.06" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="165.1" x2="226.06" y2="144.78" width="0.1524" layer="91"/>
+<junction x="226.06" y="165.1"/>
+<junction x="226.06" y="170.18"/>
 <pinref part="J2" gate="G$1" pin="VDD"/>
 <pinref part="+3V3_ISO3" gate="G$1" pin="+3V3_ISO"/>
-<wire x1="203.2" y1="170.18" x2="208.28" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="205.74" y1="170.18" x2="210.82" y2="170.18" width="0.1524" layer="91"/>
 <pinref part="RN4" gate="-3" pin="1"/>
-<wire x1="208.28" y1="170.18" x2="213.36" y2="170.18" width="0.1524" layer="91"/>
-<wire x1="213.36" y1="170.18" x2="218.44" y2="170.18" width="0.1524" layer="91"/>
-<wire x1="218.44" y1="170.18" x2="223.52" y2="170.18" width="0.1524" layer="91"/>
-<wire x1="203.2" y1="167.64" x2="203.2" y2="170.18" width="0.1524" layer="91"/>
-<junction x="203.2" y="170.18"/>
+<wire x1="210.82" y1="170.18" x2="215.9" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="215.9" y1="170.18" x2="220.98" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="220.98" y1="170.18" x2="226.06" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="205.74" y1="167.64" x2="205.74" y2="170.18" width="0.1524" layer="91"/>
+<junction x="205.74" y="170.18"/>
 <pinref part="RN4" gate="-4" pin="1"/>
-<wire x1="198.12" y1="167.64" x2="198.12" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="167.64" x2="200.66" y2="170.18" width="0.1524" layer="91"/>
 <pinref part="RN4" gate="-2" pin="1"/>
-<wire x1="208.28" y1="167.64" x2="208.28" y2="170.18" width="0.1524" layer="91"/>
-<junction x="208.28" y="170.18"/>
+<wire x1="210.82" y1="167.64" x2="210.82" y2="170.18" width="0.1524" layer="91"/>
+<junction x="210.82" y="170.18"/>
 <pinref part="RN4" gate="-1" pin="1"/>
-<wire x1="213.36" y1="167.64" x2="213.36" y2="170.18" width="0.1524" layer="91"/>
-<junction x="213.36" y="170.18"/>
+<wire x1="215.9" y1="167.64" x2="215.9" y2="170.18" width="0.1524" layer="91"/>
+<junction x="215.9" y="170.18"/>
 <pinref part="R3" gate="G$1" pin="1"/>
-<wire x1="218.44" y1="167.64" x2="218.44" y2="170.18" width="0.1524" layer="91"/>
-<junction x="218.44" y="170.18"/>
+<wire x1="220.98" y1="167.64" x2="220.98" y2="170.18" width="0.1524" layer="91"/>
+<junction x="220.98" y="170.18"/>
 </segment>
 <segment>
 <pinref part="+3V3_ISO4" gate="G$1" pin="+3V3_ISO"/>
@@ -17980,8 +17998,8 @@ Isolated power supply, LDOs</text>
 </net>
 <net name="SD_DETECT" class="0">
 <segment>
-<wire x1="226.06" y1="129.54" x2="190.5" y2="129.54" width="0.1524" layer="91"/>
-<label x="190.5" y="130.175" size="1.27" layer="102"/>
+<wire x1="228.6" y1="129.54" x2="193.04" y2="129.54" width="0.1524" layer="91"/>
+<label x="193.04" y="130.175" size="1.27" layer="102"/>
 <pinref part="J2" gate="G$1" pin="SW1"/>
 </segment>
 <segment>
@@ -17999,18 +18017,17 @@ Isolated power supply, LDOs</text>
 <label x="96.52" y="140.335" size="1.27" layer="102" rot="MR0"/>
 </segment>
 <segment>
-<label x="190.5" y="137.795" size="1.27" layer="102"/>
-<wire x1="215.9" y1="137.16" x2="213.36" y2="137.16" width="0.1524" layer="91"/>
+<label x="193.04" y="137.795" size="1.27" layer="102"/>
 <junction x="215.9" y="137.16"/>
-<wire x1="213.36" y1="137.16" x2="190.5" y2="137.16" width="0.1524" layer="91"/>
-<wire x1="215.9" y1="137.16" x2="226.06" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="215.9" y1="137.16" x2="193.04" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="215.9" y1="137.16" x2="228.6" y2="137.16" width="0.1524" layer="91"/>
 <pinref part="J2" gate="G$1" pin="DAT0"/>
 <wire x1="215.9" y1="137.16" x2="215.9" y2="88.9" width="0.1524" layer="91"/>
 <pinref part="IC9" gate="G$1" pin="DAT0"/>
-<wire x1="215.9" y1="88.9" x2="226.06" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="215.9" y1="88.9" x2="228.6" y2="88.9" width="0.1524" layer="91"/>
 <pinref part="RN4" gate="-1" pin="2"/>
-<wire x1="213.36" y1="157.48" x2="213.36" y2="137.16" width="0.1524" layer="91"/>
-<junction x="213.36" y="137.16"/>
+<wire x1="215.9" y1="157.48" x2="215.9" y2="137.16" width="0.1524" layer="91"/>
+<junction x="215.9" y="137.16"/>
 </segment>
 </net>
 <net name="SDIO_D1" class="0">
@@ -18021,17 +18038,16 @@ Isolated power supply, LDOs</text>
 </segment>
 <segment>
 <pinref part="J2" gate="G$1" pin="DAT1"/>
-<wire x1="226.06" y1="134.62" x2="220.98" y2="134.62" width="0.1524" layer="91"/>
-<label x="190.5" y="135.255" size="1.27" layer="102"/>
-<wire x1="220.98" y1="134.62" x2="218.44" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="228.6" y1="134.62" x2="220.98" y2="134.62" width="0.1524" layer="91"/>
+<label x="193.04" y="135.255" size="1.27" layer="102"/>
 <junction x="220.98" y="134.62"/>
-<wire x1="218.44" y1="134.62" x2="190.5" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="220.98" y1="134.62" x2="193.04" y2="134.62" width="0.1524" layer="91"/>
 <wire x1="220.98" y1="134.62" x2="220.98" y2="86.36" width="0.1524" layer="91"/>
 <pinref part="IC9" gate="G$1" pin="DAT1"/>
-<wire x1="220.98" y1="86.36" x2="226.06" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="220.98" y1="86.36" x2="228.6" y2="86.36" width="0.1524" layer="91"/>
 <pinref part="R3" gate="G$1" pin="2"/>
-<wire x1="218.44" y1="157.48" x2="218.44" y2="134.62" width="0.1524" layer="91"/>
-<junction x="218.44" y="134.62"/>
+<wire x1="220.98" y1="157.48" x2="220.98" y2="134.62" width="0.1524" layer="91"/>
+<junction x="220.98" y="134.62"/>
 </segment>
 </net>
 <net name="SDIO_D2" class="0">
@@ -18042,15 +18058,15 @@ Isolated power supply, LDOs</text>
 </segment>
 <segment>
 <pinref part="J2" gate="G$1" pin="DAT2"/>
-<wire x1="226.06" y1="152.4" x2="198.12" y2="152.4" width="0.1524" layer="91"/>
-<label x="190.5" y="153.035" size="1.27" layer="102"/>
-<wire x1="198.12" y1="152.4" x2="190.5" y2="152.4" width="0.1524" layer="91"/>
-<junction x="198.12" y="152.4"/>
-<wire x1="198.12" y1="152.4" x2="198.12" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="228.6" y1="152.4" x2="200.66" y2="152.4" width="0.1524" layer="91"/>
+<label x="193.04" y="153.035" size="1.27" layer="102"/>
+<wire x1="200.66" y1="152.4" x2="193.04" y2="152.4" width="0.1524" layer="91"/>
+<junction x="200.66" y="152.4"/>
+<wire x1="200.66" y1="152.4" x2="200.66" y2="104.14" width="0.1524" layer="91"/>
 <pinref part="IC9" gate="G$1" pin="DAT2"/>
-<wire x1="198.12" y1="104.14" x2="226.06" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="104.14" x2="228.6" y2="104.14" width="0.1524" layer="91"/>
 <pinref part="RN4" gate="-4" pin="2"/>
-<wire x1="198.12" y1="157.48" x2="198.12" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="157.48" x2="200.66" y2="152.4" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SDIO_D3" class="0">
@@ -18061,15 +18077,15 @@ Isolated power supply, LDOs</text>
 </segment>
 <segment>
 <pinref part="J2" gate="G$1" pin="CD/DAT3"/>
-<wire x1="226.06" y1="149.86" x2="203.2" y2="149.86" width="0.1524" layer="91"/>
-<label x="190.5" y="150.495" size="1.27" layer="102"/>
-<wire x1="203.2" y1="149.86" x2="190.5" y2="149.86" width="0.1524" layer="91"/>
-<junction x="203.2" y="149.86"/>
-<wire x1="203.2" y1="149.86" x2="203.2" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="228.6" y1="149.86" x2="205.74" y2="149.86" width="0.1524" layer="91"/>
+<label x="193.04" y="150.495" size="1.27" layer="102"/>
+<wire x1="205.74" y1="149.86" x2="193.04" y2="149.86" width="0.1524" layer="91"/>
+<junction x="205.74" y="149.86"/>
+<wire x1="205.74" y1="149.86" x2="205.74" y2="101.6" width="0.1524" layer="91"/>
 <pinref part="IC9" gate="G$1" pin="CD/DAT3"/>
-<wire x1="203.2" y1="101.6" x2="226.06" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="205.74" y1="101.6" x2="228.6" y2="101.6" width="0.1524" layer="91"/>
 <pinref part="RN4" gate="-3" pin="2"/>
-<wire x1="203.2" y1="157.48" x2="203.2" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="205.74" y1="157.48" x2="205.74" y2="149.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SDIO_CLK" class="0">
@@ -18079,14 +18095,14 @@ Isolated power supply, LDOs</text>
 <label x="96.52" y="130.175" size="1.27" layer="102" rot="MR0"/>
 </segment>
 <segment>
-<label x="190.5" y="142.875" size="1.27" layer="102"/>
-<wire x1="190.5" y1="142.24" x2="210.82" y2="142.24" width="0.1524" layer="91"/>
+<label x="193.04" y="142.875" size="1.27" layer="102"/>
+<wire x1="193.04" y1="142.24" x2="213.36" y2="142.24" width="0.1524" layer="91"/>
 <pinref part="J2" gate="G$1" pin="CLK"/>
-<wire x1="210.82" y1="142.24" x2="226.06" y2="142.24" width="0.1524" layer="91"/>
-<wire x1="210.82" y1="142.24" x2="210.82" y2="93.98" width="0.1524" layer="91"/>
-<junction x="210.82" y="142.24"/>
+<wire x1="213.36" y1="142.24" x2="228.6" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="142.24" x2="213.36" y2="93.98" width="0.1524" layer="91"/>
+<junction x="213.36" y="142.24"/>
 <pinref part="IC9" gate="G$1" pin="CLK"/>
-<wire x1="210.82" y1="93.98" x2="226.06" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="93.98" x2="228.6" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SDIO_CMD" class="0">
@@ -18096,16 +18112,16 @@ Isolated power supply, LDOs</text>
 <label x="96.52" y="112.395" size="1.27" layer="102" rot="MR0"/>
 </segment>
 <segment>
-<label x="190.5" y="147.955" size="1.27" layer="102"/>
-<wire x1="208.28" y1="147.32" x2="190.5" y2="147.32" width="0.1524" layer="91"/>
-<junction x="208.28" y="147.32"/>
-<wire x1="226.06" y1="147.32" x2="208.28" y2="147.32" width="0.1524" layer="91"/>
+<label x="193.04" y="147.955" size="1.27" layer="102"/>
+<wire x1="210.82" y1="147.32" x2="193.04" y2="147.32" width="0.1524" layer="91"/>
+<junction x="210.82" y="147.32"/>
+<wire x1="228.6" y1="147.32" x2="210.82" y2="147.32" width="0.1524" layer="91"/>
 <pinref part="J2" gate="G$1" pin="CMD"/>
-<wire x1="208.28" y1="147.32" x2="208.28" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="210.82" y1="147.32" x2="210.82" y2="99.06" width="0.1524" layer="91"/>
 <pinref part="IC9" gate="G$1" pin="CMD"/>
-<wire x1="208.28" y1="99.06" x2="226.06" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="210.82" y1="99.06" x2="228.6" y2="99.06" width="0.1524" layer="91"/>
 <pinref part="RN4" gate="-2" pin="2"/>
-<wire x1="208.28" y1="157.48" x2="208.28" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="210.82" y1="157.48" x2="210.82" y2="147.32" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="ISEL_S#4" class="0">
@@ -23410,26 +23426,26 @@ ADIB and AFE connectors</text>
 </sheet>
 </sheets>
 <errors>
-<approved hash="101,6,149.86,116.84,X7-17,1,,,,"/>
-<approved hash="101,6,177.8,116.84,X7-18,1,,,,"/>
-<approved hash="104,4,63.5,137.16,IC13,VDD,N$71,,,"/>
-<approved hash="104,4,86.36,127,IC12P,V+,N$71,,,"/>
-<approved hash="104,4,86.36,111.76,IC12P,V-,GND,,,"/>
-<approved hash="104,3,116.84,43.18,IC11,AVSS,-15V_ISO,,,"/>
-<approved hash="104,3,86.36,53.34,IC11,DVDD,+3V3_ISO,,,"/>
-<approved hash="104,3,86.36,50.8,IC11,DVDD-EN,GND,,,"/>
-<approved hash="104,3,116.84,45.72,IC11,AVDD,+15V_ISO,,,"/>
-<approved hash="104,3,116.84,121.92,IC10,AVSS,-15V_ISO,,,"/>
-<approved hash="104,3,86.36,132.08,IC10,DVDD,+3V3_ISO,,,"/>
-<approved hash="104,3,86.36,129.54,IC10,DVDD-EN,GND,,,"/>
-<approved hash="104,3,116.84,124.46,IC10,AVDD,+15V_ISO,,,"/>
+<approved hash="101,6,149.86,99.06,X7-17,1,,,,"/>
+<approved hash="101,6,177.8,99.06,X7-18,1,,,,"/>
+<approved hash="104,4,63.5,137.16,IC14,VDD,N$71,,,"/>
+<approved hash="104,4,86.36,127,IC13P,V+,N$71,,,"/>
+<approved hash="104,4,86.36,111.76,IC13P,V-,GND,,,"/>
+<approved hash="104,3,116.84,43.18,IC12,AVSS,-15V_ISO,,,"/>
+<approved hash="104,3,86.36,53.34,IC12,DVDD,+3V3_ISO,,,"/>
+<approved hash="104,3,86.36,50.8,IC12,DVDD-EN,GND,,,"/>
+<approved hash="104,3,116.84,45.72,IC12,AVDD,+15V_ISO,,,"/>
+<approved hash="104,3,116.84,121.92,IC11,AVSS,-15V_ISO,,,"/>
+<approved hash="104,3,86.36,132.08,IC11,DVDD,+3V3_ISO,,,"/>
+<approved hash="104,3,86.36,129.54,IC11,DVDD-EN,GND,,,"/>
+<approved hash="104,3,116.84,124.46,IC11,AVDD,+15V_ISO,,,"/>
 <approved hash="104,1,160.02,162.56,IC1,VCC,+3V3,,,"/>
-<approved hash="104,3,25.4,43.18,IC9P,V+,+15V_ISO,,,"/>
-<approved hash="104,3,25.4,27.94,IC9P,V-,-15V_ISO,,,"/>
-<approved hash="104,4,238.76,170.18,IC14P,V+,+15V_ISO,,,"/>
-<approved hash="104,4,238.76,154.94,IC14P,V-,-15V_ISO,,,"/>
-<approved hash="104,6,71.755,166.37,IC20P,V+,+3V3_ISO,,,"/>
-<approved hash="104,6,71.755,151.13,IC20P,V-,GND,,,"/>
+<approved hash="104,3,25.4,43.18,IC10P,V+,+15V_ISO,,,"/>
+<approved hash="104,3,25.4,27.94,IC10P,V-,-15V_ISO,,,"/>
+<approved hash="104,4,238.76,170.18,IC15P,V+,+15V_ISO,,,"/>
+<approved hash="104,4,238.76,154.94,IC15P,V-,-15V_ISO,,,"/>
+<approved hash="104,6,63.5,116.84,IC22P,V+,+3V3_ISO,,,"/>
+<approved hash="104,6,63.5,101.6,IC22P,V-,GND,,,"/>
 <approved hash="104,2,78.74,55.88,IC8C,VSS_3,GND,,,"/>
 <approved hash="104,2,78.74,53.34,IC8C,VSS_4,GND,,,"/>
 <approved hash="104,2,78.74,50.8,IC8C,VSS_5,GND,,,"/>
@@ -23455,10 +23471,14 @@ ADIB and AFE connectors</text>
 <approved hash="104,2,109.22,60.96,IC8C,VDDUSB,+3V3_ISO,,,"/>
 <approved hash="104,2,109.22,20.32,IC8C,VCAP_1,N$113,,,"/>
 <approved hash="104,2,109.22,17.78,IC8C,VCAP_2,N$97,,,"/>
-<approved hash="104,2,226.06,144.78,J2,VDD,+3V3_ISO,,,"/>
-<approved hash="104,2,226.06,139.7,J2,VSS,GND,,,"/>
+<approved hash="104,2,228.6,144.78,J2,VDD,+3V3_ISO,,,"/>
+<approved hash="104,2,228.6,139.7,J2,VSS,GND,,,"/>
 <approved hash="104,1,35.56,50.8,IC6,VCC,SN_VCC,,,"/>
 <approved hash="104,1,10.16,45.72,IC6,GND,SN_GND,,,"/>
+<approved hash="104,6,33.02,172.72,IC21P,V+,+5V_ISO,,,"/>
+<approved hash="104,6,33.02,157.48,IC21P,V-,GND,,,"/>
+<approved hash="104,2,228.6,96.52,IC9,VDD,+3V3_ISO,,,"/>
+<approved hash="104,2,228.6,91.44,IC9,VSS,GND,,,"/>
 <approved hash="206,3,86.36,60.96,!DAC_ALARM,,,,,"/>
 <approved hash="206,3,86.36,139.7,!DAC_ALARM,,,,,"/>
 <approved hash="206,4,162.56,58.42,!DOUT_FAULT,,,,,"/>
@@ -23467,10 +23487,10 @@ ADIB and AFE connectors</text>
 <approved hash="206,4,25.4,58.42,!DOUT_FAULT,,,,,"/>
 <approved hash="206,3,86.36,149.86,DAC_MISO,,,,,"/>
 <approved hash="206,3,86.36,71.12,DAC_MISO,,,,,"/>
-<approved hash="206,6,38.1,149.86,N$129,,,,,"/>
-<approved hash="206,6,38.1,160.02,N$129,,,,,"/>
-<approved hash="206,6,38.1,121.92,N$134,,,,,"/>
-<approved hash="206,6,38.1,132.08,N$134,,,,,"/>
+<approved hash="206,6,38.1,99.06,N$129,,,,,"/>
+<approved hash="206,6,38.1,106.68,N$129,,,,,"/>
+<approved hash="206,6,38.1,81.28,N$134,,,,,"/>
+<approved hash="206,6,38.1,88.9,N$134,,,,,"/>
 <approved hash="113,1,131.976,90.066,FRAME1,,,,,"/>
 <approved hash="113,3,131.976,90.066,FRAME3,,,,,"/>
 <approved hash="113,4,131.976,90.066,FRAME4,,,,,"/>
@@ -23478,8 +23498,10 @@ ADIB and AFE connectors</text>
 <approved hash="113,2,131.976,90.066,FRAME2,,,,,"/>
 <approved hash="113,3,232.131,119.943,SH1,,,,,"/>
 <approved hash="113,4,199.111,47.697,SH2,,,,,"/>
-<approved hash="113,1,158.942,51.6805,TP1,,,,,"/>
+<approved hash="113,1,158.92,51.6805,TP1,,,,,"/>
 <approved hash="113,6,131.976,90.066,FRAME11,,,,,"/>
+<approved hash="115,6,207.01,147.32,-VSENSE,,,,,"/>
+<approved hash="115,6,146.05,144.78,-VSENSE,,,,,"/>
 </errors>
 </schematic>
 </drawing>
