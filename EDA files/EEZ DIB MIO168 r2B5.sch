@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.025" unitdist="inch" unit="inch" style="lines" multiple="4" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -20664,7 +20664,7 @@ Isolated power supply, LDOs</text>
 <attribute name="VALUE" x="85.852" y="156.0576" size="1.27" layer="96"/>
 </instance>
 <instance part="SUPPLY64" gate="GND" x="48.26" y="147.32" smashed="yes">
-<attribute name="VALUE" x="46.355" y="147.955" size="1.778" layer="96" rot="R180"/>
+<attribute name="VALUE" x="50.165" y="147.955" size="1.778" layer="96" rot="MR180"/>
 </instance>
 <instance part="D18" gate="G$1" x="101.6" y="157.48" smashed="yes" rot="R90">
 <attribute name="NAME" x="103.632" y="158.2166" size="1.778" layer="95"/>
