@@ -21,3 +21,9 @@ The [EEZ DIB](https://github.com/eez-open/modular-psu) MIO168 module features mu
 ### r2B2 prototype (without AFE installed)
 
 ![prototype](Images/MIO168_prototype_r2B2.JPG)
+
+### Firmware repository
+
+https://github.com/eez-open/dib-mio168-fw
+The firmware download procedure is described in [Chapter 13.2]((https://www.envox.eu/eez-bench-box-3/bb3-user-manual/13-firmware-upgrade/#bb3_man_module_upgrade)) of the User Manual.
+The MIO168 module GUI is described in [Chapter 19](https://www.envox.eu/eez-bench-box-3/bb3-user-manual/19-mio168-mixed-input-output-module/) of the User Manual.
