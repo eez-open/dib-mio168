@@ -1,3 +1,12 @@
+### Ownership and License
+The contributors are listed in CONTRIB.TXT.
+
+Licenses | OSHWA UID
+--|--
+![osl](Images/osl.png) | [![OSHW-HR000008](Images/OSHW_UID_HR8.svg)](https://certification.oshwa.org/hr000008.html)
+
+### Overview
+
 The [EEZ DIB](https://github.com/eez-open/modular-psu) MIO168 module features multiple digital I/O, analog outputs and expansion connectors for carry various AFEs.
 
 ### Feature list
